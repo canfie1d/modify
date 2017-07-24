@@ -1,0 +1,36 @@
+.stylist-gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+
+  .stylist {
+    position: relative;
+    flex: 1 1 50%;
+    width: 50%;
+    
+    .stylist__img {
+      min-width: 100%;
+      filter: grayscale(60%);
+      padding: 10px;
+      
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+
+    .stylist__name {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      padding: 20px;
+      background-image: linear-gradient(to top, rgba($black, 1), rgba($black, 0));
+      color: $white;
+      font-family: Helvetica;
+      font-size: 20px;
+    }
+  }
+
+}
