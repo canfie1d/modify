@@ -6,9 +6,10 @@ export default class Nav extends React.Component {
     return (
       <nav>
         <ul>
-          <li><NavLink activeClassName='current' to='/'>Home</NavLink></li>
+          <li><NavLink exact activeClassName='current' to='/'>Home</NavLink></li>
+          <li><NavLink activeClassName='current' to='/services'>Services</NavLink></li>
           <li><NavLink activeClassName='current' to='/stylists'>Stylists</NavLink></li>
-          <li><NavLink activeClassName='current' to='/contact'>Contact</NavLink></li>
+          <li><NavLink exact activeClassName='current' to='/contact'>Contact</NavLink></li>
         </ul>
       </nav>
     );
