@@ -1,18 +1,23 @@
 .hero {
-  position: relative;
-  height: 100vh;
-  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   
   .hero__image-wrapper {
     position: relative;
-    height: inherit;
-    width: inherit;
+    height: 100vh;
+    width: 100%;
     filter: grayscale(60%);
     overflow: hidden;
   }
 
   .hero__image {
-    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     min-height: 100vh;
   }
@@ -27,16 +32,14 @@
 
   .hero__title {
     position: absolute;
-    top: 50%;
+    top: calc(100% - 219px);
     left: 0;
-    padding-left: 5%;
-    transform: translateY(-50%);
-    font-family: Helvetica;
-    font-size: 15vw;
-    color: $white;
+    padding-left: 20px;
+    font-family: $display-font;
+    font-size: 7vw;
+    color: #FAA900;
     text-shadow: 0 0 32px rgba($black, 1);
     font-weight: 800;
-    opacity: .8;
   }
 
   .hero__content {

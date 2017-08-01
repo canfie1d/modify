@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "animated-scroll-to": "^1.1.3",
     "helpful-react-scripts": "1.1.10"
   },
   "dependencies": {

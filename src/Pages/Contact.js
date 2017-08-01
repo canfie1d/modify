@@ -1,19 +1,21 @@
 import React from 'react';
-import Hero from '../Components/Hero';
-import Header from '../Components/Header';
 
-export default class Home extends React.Component {
+class Contact extends React.Component {
   render() {
     return (
-      <div className='page-wrapper'>
-        <Header />
-        <Hero size='short' content='title'>
-          <h1 className='hero__title'>Contact</h1>
-        </Hero>
-        <main>
-          
-        </main>
+      <div>
+        <form>
+          <label className='label' htmlFor='name'>Name:</label>
+          <input className='input' id='name' />
+          <label className='label' htmlFor='title'>Title:</label>
+          <input className='input' id='title' />
+          <label className='label' htmlFor='message'>Message:</label>
+          <textarea className='textarea' id='message' />
+          <button className='button button--dark'>Send</button>
+        </form>
       </div>
     );
   }
 }
+
+export default Contact;

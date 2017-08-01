@@ -1,15 +1,21 @@
+@font-face {
+  font-family: 'Clarendon';
+  src:url('./Assets/Fonts/superclarendon_regular-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 ////////////////////////////////////////
 //      Font-Family Definitions       //
 ////////////////////////////////////////
 
 $helvetica= 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
-
+$clarendon= 'Clarendon', $helvetica;
 ///////////////////////////////
 //      Font Variables       //
 ///////////////////////////////
-$display-font= $helvetica;
-$display-font--bold= $helvetica;
-$body-font= $helvetica;
+$display-font= $clarendon;
+$display-font--bold= $clarendon;
+$body-font= $clarendon;
 
 ////////////////////////////
 //      Font Mixins       //

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Contact from '../Pages/Contact';
+import Services from '../Pages/Services';
 import { toggleNavFixedState } from '../Actions/Nav.js';
 
 function mapStateToProps (state) {
@@ -19,4 +19,4 @@ function mapDispatchToProps (dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Contact);
+)(Services);

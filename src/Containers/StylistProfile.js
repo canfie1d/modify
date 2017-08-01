@@ -1,18 +1,18 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import StylistProfile from '../Pages/StylistProfile';
-import { addNumber, subtractNumber } from '../Actions/Number.js';
+import { toggleNavFixedState } from '../Actions/Nav.js';
 
 function mapStateToProps (state) {
   return {
-    number: state.number.value
+    navFixed: state.nav.navFixed,
+    routing: state.routing
   };
 }
 
 function mapDispatchToProps (dispatch) {
   return bindActionCreators({
-    addNumber,
-    subtractNumber
+    toggleNavFixedState
   }, dispatch);
 }
 
