@@ -22,7 +22,7 @@ class ServiceMenu extends React.Component {
   renderServices() {
     let servicesDomArr = [];
     let servicesArr = getServices();
-    
+
     for (let i = 0; i < servicesArr.length; i++) {
       servicesDomArr.push (
         <li key={`service-item-${i}`} className='service__item'>
@@ -38,12 +38,12 @@ class ServiceMenu extends React.Component {
   render() {
     return (
       <div className='content-flex'>
-        <ul className='service__list'>
+        <ul className='service__list max-width'>
           {this.renderServices()}
         </ul>
+        <p className='p p--dark'>All of our stylists are independent contractors and prices vary dependent on each individual stylist. To see each stylist specific price details, click on the stylist bio tab.</p>
         <p className='p p--dark p--small p--align-left'>* Hana only</p>
         <p className='p p--dark p--small p--align-left'>** Tina &amp; Alysia only</p>
-        <p className='p p--dark'>All of our stylists are independent contractors and prices vary dependent on each individual stylist. To see each stylist specific price details, click on the stylist bio tab.</p>
       </div>
     );
   }

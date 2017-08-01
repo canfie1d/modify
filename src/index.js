@@ -26,6 +26,10 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-hideLoadingIndicator();
+let link = document.getElementsByTagName('link')[3];
+
+link.onload = function () {
+  hideLoadingIndicator();
+}
 
 registerServiceWorker();
