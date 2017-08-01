@@ -2,11 +2,11 @@ import React from 'react';
 import { Route, Switch } from 'react-router';
 
 // PAGES
-import Home from './Containers/Home';
-import Services from './Containers/Services';
-import Stylists from './Containers/Stylists';
-import StylistProfile from './Containers/StylistProfile';
-import Contact from './Containers/Contact';
+import Home from './Pages/Home';
+import Services from './Pages/Services';
+import Stylists from './Pages/Stylists';
+import StylistProfile from './Pages/StylistProfile';
+import Contact from './Pages/Contact';
 import NotFound from './Pages/NotFound';
 
 export default (

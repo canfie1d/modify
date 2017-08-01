@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import StylistProfile from '../Pages/StylistProfile';
+import PageTemplate from '../Pages/PageTemplate';
 import { toggleNavFixedState } from '../Actions/Nav.js';
+import { withRouter } from 'react-router-dom';
 
 function mapStateToProps (state) {
   return {
@@ -16,7 +17,7 @@ function mapDispatchToProps (dispatch) {
   }, dispatch);
 }
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(StylistProfile);
+)(PageTemplate));

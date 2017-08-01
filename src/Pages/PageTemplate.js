@@ -13,7 +13,7 @@ export default class PageTemplate extends React.Component {
         <div className='page-wrapper'>
           <Header />
           <main className='page__content'>
-            <NavPlaceholder />
+            <NavPlaceholder navFixed={this.props.navFixed} />
             {routes}
           </main>
         </div>
@@ -21,4 +21,3 @@ export default class PageTemplate extends React.Component {
     );
   }
 }
-

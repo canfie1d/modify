@@ -12,6 +12,19 @@
     .img {
       padding: 10px;  
       width: 100%;
+      
+    }
+    
+    &:nth-of-type(odd) {
+      .img {
+        padding-left: 0;
+      }
+    }
+
+    &:nth-of-type(even) {
+      .img {
+        padding-right: 0;
+      }
     }
   }
 }

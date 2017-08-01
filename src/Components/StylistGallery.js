@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { stylistArr } from '../Services/Data';
+import { getStylists } from '../Services/Data';
 
 export default class Header extends React.Component {
   
   renderStylists() {
-    const newArr = stylistArr();
+    const stylistArr = getStylists();
     let stylistDomArr = [];
 
-    for (let i = 0; i <= newArr.length; i++) {  
-      let item = newArr[i];
+    for (let i = 0; i <= stylistArr.length; i++) {  
+      let item = stylistArr[i];
 
       if(item) {
         stylistDomArr.push (
