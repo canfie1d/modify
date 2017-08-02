@@ -1,23 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { toggleNavFixedState } from '../Actions/Nav.js';
 import { getServices } from '../Services/Data';
 
-function mapStateToProps (state) {
-  return {
-    navFixed: state.nav.navFixed,
-    routing: state.routing
-  };
-}
-
-function mapDispatchToProps (dispatch) {
-  return bindActionCreators({
-    toggleNavFixedState
-  }, dispatch);
-}
-
-class ServiceMenu extends React.Component {
+export default class ServiceMenu extends React.Component {
 
   renderServices() {
     let servicesDomArr = [];
@@ -37,19 +21,9 @@ class ServiceMenu extends React.Component {
 
   render() {
     return (
-      <div className='content-flex'>
-        <ul className='service__list max-width'>
-          {this.renderServices()}
-        </ul>
-        <p className='p p--dark'>All of our stylists are independent contractors and prices vary dependent on each individual stylist. To see each stylist specific price details, click on the stylist bio tab.</p>
-        <p className='p p--dark p--small p--align-left'>* Hana only</p>
-        <p className='p p--dark p--small p--align-left'>** Tina &amp; Alysia only</p>
-      </div>
+      <ul className='service__list m-b-100'>
+        {this.renderServices()}
+      </ul>
     );
   }
 }
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ServiceMenu);

@@ -5,7 +5,9 @@ export default class Stylists extends React.Component {
   render() {
 
     return (
-      <StylistGallery {...this.props} />
+      <div className='content-flex'>
+        <StylistGallery {...this.props} />
+      </div>
     );
   }
 }
