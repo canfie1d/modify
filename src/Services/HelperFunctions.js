@@ -11,5 +11,5 @@ export function throttle(callback, wait) {
 
 export function hideLoadingIndicator () {
   const indicator = document.getElementById('progress-indicator'); 
-  indicator.classList.add('available');
+  indicator.classList.add('hidden');
 }

@@ -5,3 +5,9 @@
 // Stylus @require will not import the same file 2x
 @require "./Styles/*";
 @require "./Styles/**/*";
+
+// once this loads, this will overwrite the styles in <head>
+.progress-indicator {
+  opacity: 0;
+  bottom: 100%;
+}

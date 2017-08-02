@@ -7,19 +7,20 @@ import modifyIcon from '../Assets/Images/modify_icon.png';
 export default class Nav extends React.Component {
   componentDidMount () {
     window.addEventListener('scroll', throttle(() => {
-      let supportPageOffset = window.pageXOffset !== undefined;
-      let isCSS1Compat = ((document.compatMode || '') === 'CSS1Compat');
-      let scroll = {
-        x: supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft,
-        y: supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop
-      };
+      let scroll = window.pageYOffset;
 
-      if (scroll.y >= window.innerHeight - 100) {
+      let under = window.innerHeight - 300 >= scroll;
+      let over = window.innerHeight + 300 <= scroll;
+      let outOfBounds = (over && !under) || (!over && under);
+
+      if (outOfBounds) {
+        return null;
+      } else if (!outOfBounds && scroll >= window.innerHeight - 100) {
         this.props.toggleNavFixedState(true);
-      } else if (scroll.y < window.innerHeight - 100) {
+      } else if (!outOfBounds && scroll <= window.innerHeight - 100) {
         this.props.toggleNavFixedState(false);
       }
-    }, 100));
+    }, 10));
   }
 
   componentWillUnmount() {

@@ -3,8 +3,9 @@ import StylistGallery from '../Components/StylistGallery';
 
 export default class Stylists extends React.Component {
   render() {
+
     return (
-      <StylistGallery />
+      <StylistGallery {...this.props} />
     );
   }
 }

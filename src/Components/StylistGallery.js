@@ -16,8 +16,10 @@ export default class Header extends React.Component {
           <div key={`item-${i}`} className='stylist-wrapper'>
             <Link key={`stylist${i}`} to={`/stylists/${item.name.toLowerCase()}`} className='stylist'>
               <img className='stylist__img' src={item.image} alt={`portrait of ${item.name}`} />
-              <span className='stylist__name'>{item.name}</span>
-              <span className='stylist__position'>{item.position}</span>
+              <div className='stylist__info'>
+                <span className='stylist__info--name'>{item.name}</span>
+                <span className='stylist__info--position'>{item.position}</span>
+              </div>
             </Link>
           </div>
         );
