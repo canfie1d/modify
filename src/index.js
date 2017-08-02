@@ -25,18 +25,4 @@ ReactDOM.render(
 
 registerServiceWorker();
 
-// let findCssLink = function () {
-//   for (let i = 0; i < document.getElementsByTagName('link').length; i++) {
-//     if (document.getElementsByTagName('link')[i].rel === 'stylesheet') {
-//       return document.getElementsByTagName('link')[i];
-//     };
-//   }
-// }
-
-// let link = findCssLink();
-
-// console.log(link);
-// link.onload = function () {
-//   console.log('here');
-//   hideLoadingIndicator();
-// }
+hideLoadingIndicator();
