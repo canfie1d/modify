@@ -7,9 +7,14 @@
 }
 
 .stylist-wrapper {
-  flex: 1 1 50%;
-  max-width: 50%;
+  flex: 1 1 100%;
+  max-width: 100%;
   margin-bottom: 60px;
+
+  +min-screen($media-medium) {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
 
   .stylist {
     position: relative;
@@ -17,7 +22,7 @@
     flex-direction: column;
     margin: 10px;
     text-decoration: none;
-    
+
     .stylist__img {
       flex: 1 1 100%;
       width: 100%;
@@ -42,7 +47,7 @@
 
       .stylist__info--position {
         text-align: right;
-        color: $secondary;      
+        color: $secondary;
         font-size: 18px;
       }
 
@@ -60,7 +65,7 @@
 
   &:hover {
 
-    .stylist__img { 
+    .stylist__img {
       filter: grayscale(20%);
     }
     .stylist__img__info {

@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
 
 export default class StylistProfile extends React.Component {
-  
+
   render() {
     let stylist = getStylists(this.props.match.params.name);
 
@@ -26,11 +26,11 @@ export default class StylistProfile extends React.Component {
       'profile__button',
       this.props.navFixed ? 'profile__button--fixed' : null
     ];
-    
+
     return (
       <div>
         <div className={classNames(classes)}>
-          <button className='button'><NavLink className='button__nav-link' to='/stylists'>Back To Stylists</NavLink></button>
+          <NavLink className='nav-link__button nav-link__button--alt' to='/stylists'>&#12296; All Stylists</NavLink>
         </div>
         <div className='content-flex'>
           <div className='profile'>
