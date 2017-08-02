@@ -1,0 +1,73 @@
+$imageWidth= 300px;
+
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile__column {
+  flex: 1 1 100%;
+
+  +min-screen($media-medium) {
+    flex: 1 1 50%;
+  }
+}
+
+.profile__name,
+.profile__position {
+  color: $black;
+  font-family: $clarendon;
+  font-size: 26px;
+  padding: 10px 0;
+}
+
+.profile__position {
+  color: $secondary;      
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+.profile__instagram {
+  
+}
+
+.profile__link {
+  white-space: nowrap;
+}
+
+.profile__image {
+  width: $imageWidth;
+}
+
++max-screen($media-medium) {
+  .profile__image {
+    display: block;
+    margin: auto;
+  }
+  .profile__name,
+  .profile__position,
+  .profile__instagram {
+    display: block;
+    margin: auto;
+    width: $imageWidth;
+  }
+
+}
+.profile__button {
+  position: relative;
+  padding: 20px;
+  height: 50px;
+
+  &.profile__button--fixed {
+    .button {
+      position: fixed;
+      top: 70px;
+      left: 20px;
+      
+      +min-screen($media-medium) {
+        top: 120px;
+      }
+    }
+
+  }
+}

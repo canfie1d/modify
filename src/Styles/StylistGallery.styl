@@ -9,40 +9,43 @@
 .stylist-wrapper {
   flex: 1 1 50%;
   max-width: 50%;
+  margin-bottom: 60px;
 
   .stylist {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin: 10px;
+    text-decoration: none;
     
     .stylist__img {
+      flex: 1 1 100%;
       width: 100%;
       filter: grayscale(60%);
-      
-      &:hover {
-        filter: grayscale(0);
+      transition: filter 300ms ease;
+    }
+
+    .stylist__info {
+      flex: 1 1 100%;
+      width: 100%;
+      padding: 20px 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .stylist__info--name,
+      .stylist__info--position {
+        color: $black;
+        font-family: $clarendon;
+        font-size: 26px;
       }
 
-    }
+      .stylist__info--position {
+        text-align: right;
+        color: $secondary;      
+        font-size: 18px;
+      }
 
-    .stylist__name {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 20px;
-      background-image: linear-gradient(to top, rgba($black, 1), rgba($black, 0));
-      color: $white;
-      font-family: Helvetica;
-      font-size: 20px;
-    }
-
-    .stylist__position {
-      position: absolute;
-      padding: 20px;
-      color: $white;
-      font-family: Helvetica;
-      font-size: 20px;
     }
 
   }
@@ -54,5 +57,16 @@
   &:nth-of-type(even) .stylist {
     margin-right: 0;
   }
+
+  &:hover {
+
+    .stylist__img { 
+      filter: grayscale(20%);
+    }
+    .stylist__img__info {
+      border: 1px solid $black;
+    }
+  }
+
 
 }
