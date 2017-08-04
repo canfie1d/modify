@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { withRouter } from 'react-router-dom';
 import animateScrollTo from 'animated-scroll-to';
 
 class ScrollToTop extends Component {
@@ -14,4 +13,4 @@ class ScrollToTop extends Component {
   }
 }
 
-export default withRouter(ScrollToTop);
+export default ScrollToTop;

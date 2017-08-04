@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Contact extends React.Component {
+export default class Contact extends React.Component {
   render() {
     return (
       <div className='content-flex'>
@@ -17,5 +17,3 @@ class Contact extends React.Component {
     );
   }
 }
-
-export default Contact;

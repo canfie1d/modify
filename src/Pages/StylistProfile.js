@@ -1,9 +1,15 @@
 import React from 'react';
 import { getStylists } from '../Services/Data';
-import classNames from 'classnames';
-import { NavLink } from 'react-router-dom';
+
 
 export default class StylistProfile extends React.Component {
+  componentWillMount() {
+    this.props.setCurrentStylist(this.props.match.params.name);
+  }
+
+  componentWillUnmount() {
+    this.props.setCurrentStylist('');
+  }
 
   render() {
     let stylist = getStylists(this.props.match.params.name);
@@ -22,32 +28,22 @@ export default class StylistProfile extends React.Component {
       }
     };
 
-    let classes = [
-      'profile__button',
-      this.props.navFixed ? 'profile__button--fixed' : null
-    ];
-
     return (
-      <div>
-        <div className={classNames(classes)}>
-          <NavLink className='nav-link__button nav-link__button--alt' to='/stylists'>&#12296; All Stylists</NavLink>
-        </div>
-        <div className='content-flex'>
-          <div className='profile'>
-            <div className='profile__column'>
-              <img className='profile__image' src={stylist.image} alt=''/>
-              <h1 className='profile__name'>{stylist.name}</h1>
-              <p className='profile__position'>{stylist.position}</p>
-              {stylist.instagram ? <a className='profile__instagram' href={`http://instagram.com/${stylist.instagram}`}>Instagram</a> : null}
-            </div>
-            <div className='profile__column'>
-              {stylistBio()}
-              <p className='p p--dark'>
-                {stylist.contact}
-                {stylist.website ? <a className='indent profile__link' href={stylist.website} >her website</a> : <a className='indent profile__link' href={`tel:${stylist.phone}`}>{stylist.phone}</a> }
-                {stylist.email ? <a href={`mailto:${stylist.email}`}>email</a> : null}
-              </p>
-            </div>
+      <div className='content-flex'>
+        <div className='profile'>
+          <div className='profile__column'>
+            <img className='profile__image' src={stylist.image} alt=''/>
+            <h1 className='profile__name'>{stylist.name}</h1>
+            <p className='profile__position'>{stylist.position}</p>
+            {stylist.instagram ? <a className='profile__instagram' href={`http://instagram.com/${stylist.instagram}`}>Instagram</a> : null}
+          </div>
+          <div className='profile__column'>
+            {stylistBio()}
+            <p className='p p--dark'>
+              {stylist.contact}
+              {stylist.website ? <a className='indent profile__link' href={stylist.website} >her website</a> : <a className='indent profile__link' href={`tel:${stylist.phone}`}>{stylist.phone}</a> }
+              {stylist.email ? <a href={`mailto:${stylist.email}`}>email</a> : null}
+            </p>
           </div>
         </div>
       </div>

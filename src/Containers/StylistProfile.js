@@ -1,12 +1,10 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import PageTemplate from '../Pages/PageTemplate';
+import StylistProfile from '../Pages/StylistProfile';
 import { toggleNavFixedState, setCurrentStylist } from '../Actions/Nav.js';
-import { withRouter } from 'react-router-dom';
 
 function mapStateToProps (state) {
   return {
-    navFixed: state.nav.navFixed,
     currentStylist: state.nav.currentStylist
   };
 }
@@ -18,7 +16,7 @@ function mapDispatchToProps (dispatch) {
   }, dispatch);
 }
 
-export default withRouter(connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(PageTemplate));
+)(StylistProfile);

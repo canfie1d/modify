@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import ImageGallery from '../Components/ImageGallery';
 
-class Home extends React.Component {
+export default class Home extends React.Component {
   render() {
     return (
       <div className='content-flex'>
@@ -15,5 +15,3 @@ class Home extends React.Component {
     );
   }
 }
-
-export default Home;
