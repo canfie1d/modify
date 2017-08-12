@@ -21,14 +21,26 @@ export function hideLoadingIndicator () {
   }
 
   let style = findStyleSheet();
+  let startTime = new Date().getTime();
+  let currentTime = '';
 
   let fi = setInterval(function() {
-    try {
-      // style.sheet.cssRules only populates when file is loaded
-      // eslint-disable-next-line
-      style.sheet.cssRules ? indicator.classList.add('hidden') : null;
+    if (currentTime - startTime < 500) {
+      console.log("Start:\n", startTime);
+      try {
+        // style.sheet.cssRules only populates when file is loaded
+        // eslint-disable-next-line
+        style.sheet.cssRules ? indicator.classList.add('hidden') : null;
+        clearInterval(fi);
+      } catch (e) {
+        console.log('Update currentTime');
+        currentTime = new Date().getTime();
+      }
+    } else {
       clearInterval(fi);
-    } catch (e){}
+      console.log('Waited 500ms\n', currentTime - startTime);
+      indicator.classList.add('hidden');
+    }
   }, 10);
 
 }

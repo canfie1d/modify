@@ -3,12 +3,10 @@ import Nav from './Nav';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { toggleNavFixedState } from '../Actions/Nav.js';
-import { withRouter } from 'react-router';
 
 function mapStateToProps (state) {
   return {
-    navFixed: state.nav.navFixed,
-    routing: state.routing
+    navFixed: state.nav.navFixed
   };
 }
 
@@ -18,18 +16,18 @@ function mapDispatchToProps (dispatch) {
   }, dispatch);
 }
 
-class Header extends React.Component {
+class Header extends React.PureComponent {
   render() {
     return (
         <header>
           <span className='logotype'>MODIFY HAIR LOUNGE</span> {/* visually hidden */}
-          <Nav toggleNavFixedState={this.props.toggleNavFixedState} navFixed={this.props.navFixed} />
+          <Nav toggleNavFixedState={this.props.toggleNavFixedState} navFixed={this.props.navFixed} location={this.props.location.pathname} />
         </header>
     );
   }
 }
 
-export default withRouter(connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Header));
+)(Header);

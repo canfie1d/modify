@@ -30,7 +30,7 @@ export default class PageTemplate extends React.Component {
       <div>
         <Hero size='tall' type='title' heroImage={heroImage} heroImageAlt="" />
         <div className='page-wrapper'>
-          <Header />
+          <Header location={this.props.location} />
           {this.renderBackButton()}
           <main className='page__content'>
             <NavPlaceholder navFixed={this.props.navFixed} />
