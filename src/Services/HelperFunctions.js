@@ -25,22 +25,22 @@ export function hideLoadingIndicator () {
   let currentTime = '';
 
   let fi = setInterval(function() {
-    if (currentTime - startTime < 500) {
-      console.log("Start:\n", startTime);
-      try {
-        // style.sheet.cssRules only populates when file is loaded
-        // eslint-disable-next-line
-        style.sheet.cssRules ? indicator.classList.add('hidden') : null;
-        clearInterval(fi);
-      } catch (e) {
-        console.log('Update currentTime');
-        currentTime = new Date().getTime();
-      }
-    } else {
+    console.log("Start:\n", startTime);
+    try {
+      // style.sheet.cssRules only populates when file is loaded
+      console.log('trying');
+      // eslint-disable-next-line
+      style.sheet.cssRules ? indicator.classList.add('hidden') : null;
       clearInterval(fi);
-      console.log('Waited 500ms\n', currentTime - startTime);
-      indicator.classList.add('hidden');
+    } catch (e) {
+      console.log('Update currentTime');
+      currentTime = new Date().getTime();
+    } finally {
+      setTimeout( () => {
+        console.log('Waited 500ms\n', currentTime - startTime);
+        indicator.classList.add('hidden');
+        clearInterval(fi);
+      }, 500)
     }
-  }, 10);
-
+  });
 }
