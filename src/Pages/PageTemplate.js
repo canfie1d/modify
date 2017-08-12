@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero from '../Components/Hero';
-import heroImage from '../Assets/Images/hero2.jpg';
+import heroImage from '../Assets/Images/Hero/hero2.jpg';
 import Header from '../Components/Header';
 import Routes from '../routes';
 import NavPlaceholder from '../Components/NavPlaceholder';

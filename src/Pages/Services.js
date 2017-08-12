@@ -1,9 +1,9 @@
 import React from 'react';
 import ServiceMenu from '../Components/ServiceMenu';
-import evo from '../Assets/Images/evo.svg';
-import onm from '../Assets/Images/onm.png';
-import onesta from '../Assets/Images/onesta.png';
-import ref from '../Assets/Images/ref.svg';
+import evo from '../Assets/Images/Products/evo.svg';
+import onm from '../Assets/Images/Products/onm.png';
+import onesta from '../Assets/Images/Products/onesta.png';
+import ref from '../Assets/Images/Products/ref.svg';
 
 export default class Services extends React.Component {
 
