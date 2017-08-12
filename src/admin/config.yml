@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: canfie1d/modify
+  branch: prod
+
+media_folder: "Assets/Images/Uploads"
+
+collections: 
+  - name: "stylists" 
+    label: "Stylists"
+    folder: "_products"
+    slug: "{{slug}}"
+    create: true
+    fields:
+        - {label: "SKU", name: "sku", widget: "string" }
+        - {label: "Price", name: "price", widget: "number"}
+        - {label: "Image", name: "image", widget: "string"}
+        - {label: "Body", name: "body", widget: "string"}  
+        - {label: "Slug", name: "slug", widget: "string" }
+        - {label: "Layout", name: "layout", widget: "hidden", default: "productdetails"}

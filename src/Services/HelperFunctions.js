@@ -33,7 +33,7 @@ export function hideLoadingIndicator () {
       setTimeout( () => {
         indicator.classList.add('hidden');
         clearInterval(fi);
-      }, 5000)
+      }, 1000)
     }
   });
 }
