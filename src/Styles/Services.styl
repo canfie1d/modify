@@ -1,12 +1,26 @@
 .products {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   align-items: center;
   justify-content: space-around;
 
-  .products__img {
-    flex: 0 1 auto;
-    max-width: 300px;
-    height: auto;
+  .product__img-wrapper {
+    flex: 1 1 100%;
+    width: 100%;
+    margin-bottom: 40px;
+  
+    .products__img {
+      max-width: 300px;
+      // width: 100%;
+      height: auto;
+      padding: 10px;
+      display: block;
+      margin: auto;
+    }
+    +min-screen($media-medium) {
+      flex: 1 1 50%;
+      width: 50%;
+    }
   }
 }

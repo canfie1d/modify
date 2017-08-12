@@ -1,7 +1,28 @@
 import React from 'react';
 import ServiceMenu from '../Components/ServiceMenu';
+import evo from '../Assets/Images/evo.svg';
+import onm from '../Assets/Images/onm.png';
+import onesta from '../Assets/Images/onesta.png';
+import ref from '../Assets/Images/ref.svg';
 
 export default class Services extends React.Component {
+
+  renderImages() {
+    let images = [{src: evo, alt: 'EVO Logo'}, {src: onm, alt: 'ONM Logo'}, { src: ref, alt:"REF LOGO"},{src: onesta, alt: "ONESTA Logo"}];
+    let domImages = []
+
+    for (let i = 0; i < images.length; i++) {
+      domImages.push(
+        <div key={`brand-image-${i}`} className='product__img-wrapper'>
+          <img className='products__img' alt={images[i].alt} src={images[i].src} />
+        </div>
+      );
+    }
+
+    return domImages;
+
+  }
+
   render() {
     return (
       <div className='content-flex'>
@@ -10,9 +31,7 @@ export default class Services extends React.Component {
         <p className='p p--dark p--small p--align-left'>* Hana only</p>
         <p className='p p--dark p--small p--align-left m-b-100'>** Tina &amp; Alysia only</p>
         <div className='products'>
-          <img className='products__img' alt='' src="http://nebula.wsimg.com/7f741771d666d05ffc993b551308bc81?AccessKeyId=ED788583612E85067D70&disposition=0&alloworigin=1" />
-          <img className='products__img' alt='' src="http://nebula.wsimg.com/ce29f0bd818b87f0e2f104a03173b1cc?AccessKeyId=ED788583612E85067D70&disposition=0&alloworigin=1" />
-          <img className='products__img' alt='' src="http://nebula.wsimg.com/a6f8d5474e141982a8ff22ce634273b9?AccessKeyId=ED788583612E85067D70&disposition=0&alloworigin=1" />
+          {this.renderImages()}
         </div>
       </div>
     );
