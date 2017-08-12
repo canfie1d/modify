@@ -1,0 +1,47 @@
+backend:
+  name: github
+  repo: canfie1d/modify
+  branch: prod
+
+publish_mode: editorial_workflow
+media_folder: "Assets/Images/Uploads"
+
+collections: 
+  - name: "home" 
+    label: "Home"
+    folder: "Home/"
+    slug: "{{name}}"
+    create: false
+    fields:
+        - {label: "Intro Paragraph 1", name: "intro1", widget: "string" }
+        - {label: "Intro Paragraph 2", name: "intro2", widget: "string"}
+        - {label: "Image 1", name: "image1", widget: "image"}
+        - {label: "Image 2", name: "image2", widget: "image"}
+        - {label: "Image 3", name: "image3", widget: "image"}
+        - {label: "Image 4", name: "image4", widget: "image"}
+        - {label: "Image 5", name: "image5", widget: "image"}
+        - {label: "Image 6", name: "image6", widget: "image"}
+        - {label: "Image 7", name: "image7", widget: "image"}
+        - {label: "Image 8", name: "image8", widget: "image"}
+        - {label: "Image 9", name: "image9", widget: "image"}
+        - {label: "Image 10", name: "image10", widget: "image"}
+        - {label: "Image 11", name: "image11", widget: "image"}
+        - {label: "Image 12", name: "image12", widget: "image"}
+
+  - name: "stylists" 
+    label: "Stylists"
+    folder: "Services/"
+    slug: "{{name}}"
+    create: true
+    fields:
+        - {label: "Name", name: "name", widget: "string" }
+        - {label: "Position", name: "position", widget: "string"}
+        - {label: "Image", name: "image", widget: "image"}
+        - {label: "Bio", name: "bio", widget: "string"}
+        - {label: "Bio Continued", name: "bio2", widget: "string"}
+        - {label: "Contact", name: "contact", widget: "string" }
+        - {label: "Website", name: "website", widget: "string" }
+        - {label: "Phone Number", name: "phone", widget: "string" }
+        - {label: "Email", name: "email", widget: "string"}
+        - {label: "Instagram Name", name: "instagram", widget: "string" }
+
