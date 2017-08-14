@@ -3,34 +3,29 @@ backend:
   repo: canfie1d/modify
   branch: prod
 
-publish_mode: editorial_workflow
-media_folder: "Assets/Images/Uploads"
+media_folder: "assets/images/uploads"
 
 collections: 
-  - name: "home" 
-    label: "Home"
-    folder: "Home/"
+  - name: "home-content"
+    label: "Home Content"
+    folder: "content/home-content" 
     slug: "{{name}}"
-    create: false
+    create: true
     fields:
-        - {label: "Intro Paragraph 1", name: "intro1", widget: "string" }
-        - {label: "Intro Paragraph 2", name: "intro2", widget: "string"}
-        - {label: "Image 1", name: "image1", widget: "image"}
-        - {label: "Image 2", name: "image2", widget: "image"}
-        - {label: "Image 3", name: "image3", widget: "image"}
-        - {label: "Image 4", name: "image4", widget: "image"}
-        - {label: "Image 5", name: "image5", widget: "image"}
-        - {label: "Image 6", name: "image6", widget: "image"}
-        - {label: "Image 7", name: "image7", widget: "image"}
-        - {label: "Image 8", name: "image8", widget: "image"}
-        - {label: "Image 9", name: "image9", widget: "image"}
-        - {label: "Image 10", name: "image10", widget: "image"}
-        - {label: "Image 11", name: "image11", widget: "image"}
-        - {label: "Image 12", name: "image12", widget: "image"}
+        - {label: "Intro Paragraph", name: "intro", widget: "string" }
 
-  - name: "stylists" 
+  - name: "home-images"
+    label: "Home Images"
+    folder: "content/home-images"
+    slug: "{{name}}"
+    create: true
+    fields:
+        - {label: "Image", name: "image", widget: "image"}
+        - {label: "Alt Text", name: "alttext", widget: "string"}
+
+  - name: "stylists"
     label: "Stylists"
-    folder: "Services/"
+    folder: "content/stylists"
     slug: "{{name}}"
     create: true
     fields:
@@ -45,3 +40,11 @@ collections:
         - {label: "Email", name: "email", widget: "string"}
         - {label: "Instagram Name", name: "instagram", widget: "string" }
 
+  - name: "services" 
+    label: "Services"
+    folder: "src/Content/Services"
+    slug: "{{name}}"
+    create: true
+    fields:
+        - {label: "Service", name: "servicename", widget: "string" }
+        - {label: "Cost", name: "servicecost", widget: "string"}
