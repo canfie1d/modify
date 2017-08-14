@@ -3,48 +3,74 @@ backend:
   repo: canfie1d/modify
   branch: prod
 
-media_folder: "assets/images/uploads"
+media_folder: "src/assets/images/uploads" # Media files will be stored here
+public_folder: "assets/images/uploads" # The src attribute for uploaded media
 
-collections: 
-  - name: "home-content"
-    label: "Home Content"
-    folder: "content/home-content" 
-    slug: "{{name}}"
-    create: true
-    fields:
-        - {label: "Intro Paragraph", name: "intro", widget: "string" }
-
+collections: # A list of collections the CMS should be able to edit
+  - name: "home-content" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Home Content" # Used in the UI, ie.: "New Post"
+    folder: "src/Content/Home" # The path to the folder where the documents are stored
+    slug: "{{slug}}" # Filename template i.e. title.md
+    extension: json
+    format: json
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+        - label: "Intro"
+          name: "intro"
+          widget: "object"
+          fields:
+            - {label: "Intro Paragraph", name: "introParagraph", widget: "string" }
+            - {label: "Intro Paragraph 2", name: "introParagraph2", widget: "string" }
+  
   - name: "home-images"
     label: "Home Images"
-    folder: "content/home-images"
-    slug: "{{name}}"
+    folder: "src/Content/Home"
+    slug: "{{slug}}"
+    extension: json
+    format: json
     create: true
     fields:
-        - {label: "Image", name: "image", widget: "image"}
-        - {label: "Alt Text", name: "alttext", widget: "string"}
+        - label: "Image"
+          name: "image"
+          widget: "object"
+          fields:
+            - {label: "Image", name: "image", widget: "image" }
+            - {label: "Image Description", name: "alt", widget: "string" }
 
   - name: "stylists"
     label: "Stylists"
-    folder: "content/stylists"
-    slug: "{{name}}"
+    folder: "src/Content/Stylists"
+    slug: "{{slug}}"
+    extension: json
+    format: json
     create: true
     fields:
-        - {label: "Name", name: "name", widget: "string" }
-        - {label: "Position", name: "position", widget: "string"}
-        - {label: "Image", name: "image", widget: "image"}
-        - {label: "Bio", name: "bio", widget: "string"}
-        - {label: "Bio Continued", name: "bio2", widget: "string"}
-        - {label: "Contact", name: "contact", widget: "string" }
-        - {label: "Website", name: "website", widget: "string" }
-        - {label: "Phone Number", name: "phone", widget: "string" }
-        - {label: "Email", name: "email", widget: "string"}
-        - {label: "Instagram Name", name: "instagram", widget: "string" }
+        - label: "Stylist"
+          name: "stylist"
+          widget: "object"
+          fields:
+            - {label: "Name", name: "name", widget: "string" }
+            - {label: "Position", name: "position", widget: "string"}
+            - {label: "Image", name: "image", widget: "image"}
+            - {label: "Bio", name: "bio", widget: "string"}
+            - {label: "Bio Continued", name: "bio2", widget: "string"}
+            - {label: "Contact", name: "contact", widget: "string" }
+            - {label: "Website", name: "website", widget: "string", required: false }
+            - {label: "Phone Number", name: "phone", widget: "string", required: false }
+            - {label: "Email", name: "email", widget: "string", required: false}
+            - {label: "Instagram Name", name: "instagram", widget: "string", required: false }
 
   - name: "services" 
     label: "Services"
     folder: "src/Content/Services"
-    slug: "{{name}}"
+    slug: "{{slug}}"
+    extension: json
+    format: json
     create: true
     fields:
-        - {label: "Service", name: "servicename", widget: "string" }
-        - {label: "Cost", name: "servicecost", widget: "string"}
+        - label: "Service"
+          name: "service"
+          widget: "object"
+          fields:
+            - {label: "Service Name", name: "serviceName", widget: "string" }
+            - {label: "Service Cost", name: "serviceCost", widget: "string"}
