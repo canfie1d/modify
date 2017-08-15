@@ -10,46 +10,49 @@ collections: # A list of collections the CMS should be able to edit
   - name: "home-content" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Home Content" # Used in the UI, ie.: "New Post"
     folder: "src/Content/Home" # The path to the folder where the documents are stored
-    slug: "{{slug}}" # Filename template i.e. title.md
+    # slug: "{{slug}}" # Filename template i.e. title.md
+    file: "home-content.json"
     extension: json
     format: json
     create: true # Allow users to create new documents in this collection
     fields: # The fields for each document, usually in front matter
-        - label: "Intro"
-          name: "intro"
-          widget: "object"
-          fields:
-            - {label: "Intro Paragraph", name: "introParagraph", widget: "string" }
-            - {label: "Intro Paragraph 2", name: "introParagraph2", widget: "string" }
+      - label: "Intro"
+        name: "title"
+        widget: "object"
+        fields:
+          - {label: "Intro Paragraph", name: "title", widget: "string" }
+          - {label: "Intro Paragraph 2", name: "introParagraph2", widget: "string" }
   
   - name: "home-images"
     label: "Home Images"
     folder: "src/Content/Home"
-    slug: "{{slug}}"
+    # slug: "{{slug}}"
+    file: "home-images.json"
     extension: json
     format: json
     create: true
     fields:
         - label: "Image"
-          name: "image"
+          name: "title"
           widget: "object"
           fields:
-            - {label: "Image", name: "image", widget: "image" }
+            - {label: "Image", name: "title", widget: "image" }
             - {label: "Image Description", name: "alt", widget: "string" }
 
   - name: "stylists"
     label: "Stylists"
     folder: "src/Content/Stylists"
-    slug: "{{slug}}"
+    # slug: "{{slug}}"
+    file: "stylists.json"
     extension: json
     format: json
     create: true
     fields:
         - label: "Stylist"
-          name: "stylist"
+          name: "title"
           widget: "object"
           fields:
-            - {label: "Name", name: "name", widget: "string" }
+            - {label: "Name", name: "title", widget: "string" }
             - {label: "Position", name: "position", widget: "string"}
             - {label: "Image", name: "image", widget: "image"}
             - {label: "Bio", name: "bio", widget: "string"}
@@ -63,14 +66,15 @@ collections: # A list of collections the CMS should be able to edit
   - name: "services" 
     label: "Services"
     folder: "src/Content/Services"
-    slug: "{{slug}}"
+    # slug: "{{slug}}"
+    file: "services.json"
     extension: json
     format: json
     create: true
     fields:
         - label: "Service"
-          name: "service"
+          name: "title"
           widget: "object"
           fields:
-            - {label: "Service Name", name: "serviceName", widget: "string" }
+            - {label: "Service Name", name: "title", widget: "string" }
             - {label: "Service Cost", name: "serviceCost", widget: "string"}
