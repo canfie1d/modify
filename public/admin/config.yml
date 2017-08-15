@@ -13,7 +13,7 @@ collections: # A list of collections the CMS should be able to edit
       - file: "src/Content/home-content.json"
         label: "Intro Paragraphs"
         name: "introParagraphs"
-        fields: 
+        fields:
           [{label: Paragraph, name: paragraph1, widget: string}, {label: Paragraph, name: paragraph2, widget: string}]
   # - name: "home-content" # Used in routes, ie.: /admin/collections/:slug/edit
   #   label: "Home Content" # Used in the UI, ie.: "New Post"
