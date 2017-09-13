@@ -19,8 +19,8 @@ function mapDispatchToProps (dispatch) {
 class Header extends React.PureComponent {
   render() {
     return (
-        <header>
-          <span className='logotype'>MODIFY HAIR LOUNGE</span> {/* visually hidden */}
+        <header className='sticky'>
+          <span className='visually-hidden'>MODIFY HAIR LOUNGE</span> {/* visually hidden */}
           <Nav toggleNavFixedState={this.props.toggleNavFixedState} navFixed={this.props.navFixed} location={this.props.location.pathname} />
         </header>
     );
