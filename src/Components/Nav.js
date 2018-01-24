@@ -5,7 +5,7 @@ import { throttle } from '../Services/HelperFunctions';
 import modifyIcon from '../Assets/Images/modify_icon.png';
 
 export default class Nav extends React.Component {
-  componentDidMount () {
+  componentDidMount() {
     window.addEventListener('scroll', throttle(() => {
       let scroll = window.pageYOffset;
 
@@ -24,7 +24,7 @@ export default class Nav extends React.Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", throttle(() => {},0));
+    window.removeEventListener("scroll", throttle(() => { }, 0));
   }
 
   render() {
@@ -37,7 +37,7 @@ export default class Nav extends React.Component {
       <nav id='nav' className={classNames(classes)}>
         <ul>
           <li className='nav__item nav__item__logo'>
-            <NavLink exact activeClassName='current' to='/'><img className='nav__image' src={modifyIcon} alt='Modify Hair Lounge Logo' /></NavLink>
+            <NavLink exact activeClassName='current' to='/'><img className='nav__image' src={modifyIcon} alt='Modify Hair Lounge Logo' /><span className='visually-hidden'>Home</span></NavLink>
           </li>
           <li className='nav__item'>
             <NavLink exact activeClassName='current' to='/services'>Services</NavLink>

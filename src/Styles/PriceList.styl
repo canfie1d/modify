@@ -1,0 +1,36 @@
+.pricing-table {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  .pricing-table__service {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex: 1 1 100%;
+    border: 1px solid $off-white;
+    padding: 10px;
+
+    +screen($media-small $media-medium) {
+      flex: 1 1 50%;
+    }
+
+    +min-screen($media-large) {
+      flex: 1 1 50%;
+    }
+  }
+}
+.pricing-table__service-description {
+  display: inline;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.pricing-table__service-cost {
+  display: inline;
+  text-align: right;
+  margin-bottom: 0;
+  color: $secondary;
+}
