@@ -8,7 +8,7 @@ export default class ServiceMenu extends React.Component {
     let servicesArr = getServices();
 
     for (let i = 0; i < servicesArr.length; i++) {
-      servicesDomArr.push (
+      servicesDomArr.push(
         <li key={`service-item-${i}`} className='service__item'>
           <span className='service__name'>{servicesArr[i].name}</span>
           <span className='service__cost'>{servicesArr[i].cost}</span>
@@ -21,7 +21,7 @@ export default class ServiceMenu extends React.Component {
 
   render() {
     return (
-      <ul className='service__list m-b-100'>
+      <ul className='service__list m-b-50'>
         {this.renderServices()}
       </ul>
     );
