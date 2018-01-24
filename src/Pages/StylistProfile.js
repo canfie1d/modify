@@ -1,6 +1,6 @@
 import React from 'react';
 import { getStylists } from '../Services/Data';
-
+import PriceList from '../Components/PriceList';
 
 export default class StylistProfile extends React.Component {
   componentWillMount() {
@@ -11,39 +11,48 @@ export default class StylistProfile extends React.Component {
     this.props.setCurrentStylist('');
   }
 
-  render() {
-    let stylist = getStylists(this.props.match.params.name);
+  renderBio(stylist) {
+    if (stylist.bio) {
+      let bio = [];
 
-    let stylistBio = () => {
-      if (stylist.bio) {
-        let bioDom = [];
-
-        for (let i = 0; i< stylist.bio.length; i++) {
-          bioDom.push(
+      for (let i = 0; i < stylist.bio.length; i++) {
+        bio.push(
           <p key={`bio-p-${i}`} className='p p--dark'>{stylist.bio[i]}</p>
         );
-        }
-
-        return bioDom;
       }
-    };
+
+      return bio;
+    }
+  }
+
+  renderPriceList(stylist) {
+    if (stylist.pricing) {
+      return <PriceList pricing={stylist.pricing} />
+    }
+  }
+
+  render() {
+    let stylist = getStylists(this.props.match.params.name);
 
     return (
       <div className='content-flex'>
         <div className='profile'>
           <div className='profile__column'>
-            <img className='profile__image' src={stylist.image} alt=''/>
             <h1 className='profile__name'>{stylist.name}</h1>
             <p className='profile__position'>{stylist.position}</p>
-            {stylist.instagram ? <a className='profile__instagram' href={`http://instagram.com/${stylist.instagram}`}>Instagram</a> : null}
           </div>
           <div className='profile__column'>
-            {stylistBio()}
-            <p className='p p--dark'>
+            <img className='profile__image m-b-50' src={stylist.image} alt='' />
+            <p className='p p--dark p--small stylist__data'>
               {stylist.contact}
-              {stylist.website ? <a className='indent profile__link' href={stylist.website} >her website</a> : <a className='indent profile__link' href={`tel:${stylist.phone}`}>{stylist.phone}</a> }
+              {stylist.website ? <a className='indent profile__link' href={stylist.website} >her website.</a> : <a className='indent profile__link' href={`tel:${stylist.phone}`}>{stylist.phone}.</a>}
               {stylist.email ? <a href={`mailto:${stylist.email}`}>email</a> : null}
+              {stylist.instagram ? <span className='profile__instagram'>Visit {stylist.name} on <a href={`http://instagram.com/${stylist.instagram}`}>Instagram</a></span> : null}
             </p>
+          </div>
+          <div className='profile__column'>
+            {this.renderPriceList(stylist)}
+            {this.renderBio(stylist)}
           </div>
         </div>
       </div>
