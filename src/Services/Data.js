@@ -18,7 +18,7 @@ import Hana from '../Assets/Images/Stylists/hana.jpg';
 import Polly from '../Assets/Images/Stylists/polly.jpg';
 import Sarah from '../Assets/Images/Stylists/avatar.jpg';
 import Dusty from '../Assets/Images/Stylists/dusty.jpg';
-import Gayle from '../Assets/Images/Stylists/gale.jpg';
+import Gayle from '../Assets/Images/Stylists/avatar.jpg';
 import Alysia from '../Assets/Images/Stylists/alysia.jpg';
 import Robin from '../Assets/Images/Stylists/robin.jpg';
 import Mitch from '../Assets/Images/Stylists/mitch.jpg';
