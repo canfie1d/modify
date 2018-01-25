@@ -5,35 +5,30 @@ backend:
 
 media_folder: "public/assets/images/uploads" # Media files will be stored here
 public_folder: "static/media/images" # The src attribute for uploaded media
+publish_mode: editorial_workflow
 
 collections: # A list of collections the CMS should be able to edit
   - name: "home-content"
     label: "Home Content"
-    files:
-      - file: "src/Content/home-content.json"
-        label: "Intro Paragraphs"
-        name: "introParagraphs"
-        fields:
-          [{label: Paragraph, name: paragraph1, widget: string}, {label: Paragraph, name: paragraph2, widget: string}]
-  # - name: "home-content" # Used in routes, ie.: /admin/collections/:slug/edit
-  #   label: "Home Content" # Used in the UI, ie.: "New Post"
-  #   folder: "src/Content/Home" # The path to the folder where the documents are stored
-  #   format: json
-  #   create: false # Allow users to create new documents in this collection
-  #   fields: # The fields for each document, usually in front matter
-  #     - {label: "Intro Paragraph", name: "title", widget: "string" }
-  #     - {label: "Intro Paragraph 2", name: "body", widget: "string" }
+    folder: "src/Content/Home"
+    create: true
+    slug: {{slug}}
+    fields:
+      [{label: Paragraph, name: paragraph, widget: string}]
 
   # - name: "home-images"
   #   label: "Home Images"
   #   folder: "src/Content/Home"
-  #   format: json
   #   create: true
-  #   fields:
-  #     - {label: "Image", name: "title", widget: "image" }
-  #     - {label: "Image Description", name: "alt", widget: "string" }
-          
-
+  #     fields:
+  #       label: "Home Image"
+  #       name: "homeImage"
+  #       fields:
+  #       - label: "Image"
+  #         name: "title"
+  #         widget: "object"
+  #         fields:
+  #           [{label: Image, name: url, widget: image}, {label: Image Description, name: alt, widget: string}]
   # - name: "stylists"
   #   label: "Stylists"
   #   folder: "src/Content/Stylists"
