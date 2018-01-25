@@ -6,7 +6,7 @@ export default class Contact extends React.Component {
       <div className='content-flex'>
         <p className='p p--dark m-b-50'>If you need anything at all, don't hesitate to send us a message and we'll get back to you as soon as we can!</p>
         <form className='form' method="post">
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="contact" value="contact" />
           <div className='form__column'>
             <label className='label' htmlFor='name'>Name</label>
             <input className='input' name="name" id='name' type='text' required />
