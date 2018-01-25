@@ -8,6 +8,9 @@ export default class Contact extends React.Component {
       email: "",
       message: ""
     };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
