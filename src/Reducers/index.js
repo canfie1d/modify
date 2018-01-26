@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import stylistProfile from './stylistProfile.js';
+import profile from './profile.js';
 
 export default combineReducers({
-  stylistProfile
+  profile
 });
