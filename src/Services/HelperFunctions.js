@@ -1,15 +1,4 @@
-export function throttle(callback, wait) {
-  var time = Date.now();
-
-  return function() {
-    if ((time + wait - Date.now()) < 0) {
-      callback();
-      time = Date.now();
-    }
-  }
-}
-
-export function hideLoadingIndicator () {
+export function hideLoadingIndicator() {
   const indicator = document.getElementById('progress-indicator');
 
   let findStyleSheet = function () {
@@ -21,8 +10,8 @@ export function hideLoadingIndicator () {
   }
 
   let style = findStyleSheet();
-  
-  let fi = setInterval(function() {
+
+  let fi = setInterval(function () {
     try {
       // style.sheet.cssRules only populates when file is loaded
       // eslint-disable-next-line
@@ -30,7 +19,7 @@ export function hideLoadingIndicator () {
       clearInterval(fi);
     } catch (e) {
     } finally {
-      setTimeout( () => {
+      setTimeout(() => {
         indicator.classList.add('hidden');
         clearInterval(fi);
       }, 1000)

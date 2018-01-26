@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import nav from './nav.js';
+import stylistProfile from './stylistProfile.js';
 
 export default combineReducers({
-  nav
+  stylistProfile
 });

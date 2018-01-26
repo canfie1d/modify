@@ -1,16 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import animateScrollTo from 'animated-scroll-to';
 
-class ScrollToTop extends Component {
+export default class ScrollToTop extends React.Component {
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
-      animateScrollTo(window.innerHeight, { speed: 500, minDuration: 500 });
+      animateScrollTo(window.innerHeight - this.props.offset, { speed: 500, minDuration: 500 });
     }
   }
 
   render() {
-    return <div>{this.props.children}</div>
+    return null;
   }
 }
 
-export default ScrollToTop;
+ScrollToTop.defaultProps = {
+  offset: 0
+}

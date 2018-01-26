@@ -1,17 +1,16 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import StylistProfile from '../Pages/StylistProfile';
-import { toggleNavFixedState, setCurrentStylist } from '../Actions/Nav.js';
+import { setCurrentStylist } from '../Actions/stylistProfile.js';
 
-function mapStateToProps (state) {
+function mapStateToProps(state) {
   return {
     currentStylist: state.nav.currentStylist
   };
 }
 
-function mapDispatchToProps (dispatch) {
+function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    toggleNavFixedState,
     setCurrentStylist
   }, dispatch);
 }
