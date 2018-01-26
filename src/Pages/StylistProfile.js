@@ -1,6 +1,7 @@
 import React from 'react';
 import { getStylists } from '../Services/Data';
 import PriceList from '../Components/PriceList';
+import { NavLink } from 'react-router-dom';
 
 export default class StylistProfile extends React.Component {
   componentWillMount() {
@@ -31,11 +32,22 @@ export default class StylistProfile extends React.Component {
     }
   }
 
+  renderBackButton() {
+    if (this.props.currentStylist !== '') {
+      return (
+        <div className='profile__button'>
+          <NavLink className='nav-link__button nav-link__button--alt' to='/stylists'>&#12296; All Stylists</NavLink>
+        </div>
+      );
+    }
+  }
+
   render() {
     let stylist = getStylists(this.props.match.params.name);
 
     return (
       <div className='content-flex'>
+        {this.renderBackButton()}
         <div className='profile'>
           <div className='profile__column'>
             <h1 className='profile__name'>{stylist.name}</h1>

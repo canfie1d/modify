@@ -1,0 +1,54 @@
+.contact {
+  display: flex;
+  // align-items: stretch;
+  width: 100%;
+  flex-wrap: wrap;
+
+  .contact-column {
+    flex: 1 0 100%;
+
+    &:first-of-type {
+      margin-bottom: 25px;
+    }
+
+    +min-screen($media-medium) {
+      flex: 1 0 50%;
+
+      &:first-of-type {
+        padding-right: 25px;
+        margin-bottom: 0;
+      }
+
+      &:last-of-type {
+        padding-top: 40px;
+        padding-left: 25px;
+      }
+    }
+  }
+}
+
+.map {
+  width: 100%;
+  min-height: 300px;
+
+  .map__pin {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+address {
+  padding: 20px 0;
+
+  .address__p {
+    font-family: $display-font;
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .address__a {
+    font-family: $display-font;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+}
