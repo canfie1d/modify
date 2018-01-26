@@ -32,7 +32,7 @@ collections: # A list of collections the CMS should be able to edit
   #   fields:
   #     - {label: "Image", name: "title", widget: "image" }
   #     - {label: "Image Description", name: "alt", widget: "string" }
-          
+
 
   # - name: "stylists"
   #   label: "Stylists"
@@ -53,9 +53,8 @@ collections: # A list of collections the CMS should be able to edit
   #           - {label: "Website", name: "website", widget: "string", required: false }
   #           - {label: "Phone Number", name: "phone", widget: "string", required: false }
   #           - {label: "Email", name: "email", widget: "string", required: false}
-  #           - {label: "Instagram Name", name: "instagram", widget: "string", required: false }
 
-  # - name: "services" 
+  # - name: "services"
   #   label: "Services"
   #   folder: "src/Content/Services"
   #   format: json
