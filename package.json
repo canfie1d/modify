@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "complete-react-scripts": "^1.1.17",
-    "mapbox-gl": "^0.43.0",
-    "netlify-cms": "^1.0.4",
+    "mapbox-gl": "^0.44.0",
+    "netlify-cms": "^1.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-mapbox-gl": "^3.4.1",

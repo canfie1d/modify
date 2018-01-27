@@ -9,7 +9,7 @@ export default class Products extends React.Component {
     for (let i = 0; i < products.length; i++) {
       productArr.push(
         <div key={`product-${i}`} className='product__img-wrapper'>
-          <Link to={`/services/${products[i].id}`}>
+          <Link to={`/products/${products[i].id}`}>
             <img className='products__img' alt={products[i].alt} src={products[i].image} />
           </Link>
         </div>

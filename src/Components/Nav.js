@@ -13,10 +13,13 @@ export default class Nav extends React.Component {
               <NavLink exact activeClassName='current' to='/'><img className='nav__image' src={modifyIcon} alt='Modify Hair Lounge Logo' /><span className='visually-hidden'>Home</span></NavLink>
             </li>
             <li className='nav__item'>
+              <NavLink activeClassName='current' to='/stylists'>Stylists</NavLink>
+            </li>
+            <li className='nav__item'>
               <NavLink exact activeClassName='current' to='/services'>Services</NavLink>
             </li>
             <li className='nav__item'>
-              <NavLink activeClassName='current' to='/stylists'>Stylists</NavLink>
+              <NavLink activeClassName='current' to='/products'>Products</NavLink>
             </li>
             <li className='nav__item'>
               <NavLink exact activeClassName='current' to='/contact'>Contact</NavLink>
