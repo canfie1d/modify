@@ -25,7 +25,7 @@ export default class ProductProfile extends React.Component {
 
   render() {
     let product = getProducts(this.props.match.params.id);
-    console.log(product);
+
     return (
       <div className='content-flex'>
         <div className='profile__button'>

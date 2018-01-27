@@ -17,7 +17,8 @@ export function getStylists(stylist) {
       name: 'Jodi',
       position: 'Owner & Stylist',
       bio: [
-        "As a stylist in the industry for nearly 18 years, Jodi’s passion shines through with the diversity that she gets with every guest she sees.  Every client has a different story to tell as well as a different identity of what they want their hair to evoke, and Jodi's favorite part of what she does is building long term relationships.  She makes it a priority to actively listen and understand what her clients are looking for, as well as educating them on how to duplicate their style at home.  Jodi’s education started as a graduate of the Aveda Institute in Minneapolis in 1998, and has continued her education with a wide range of educators  to actively keep herself challenged with different brands and techniques. Feel free to schedule a complimentary consultation to discuss your needs."
+        "As a stylist in the industry for over 20 years, Jodi’s passion shines through with the diversity that she gets with every guest she sees. Every client has a different story to tell as well as a different identity of what they want their hair to evoke, and Jodi's favorite part of what she does is building long term relationships. She makes it a priority to actively listen and understand what her clients are looking for, as well as educating them on how to duplicate their style at home.",
+        "Jodi’s education started as a graduate of the Aveda Institute in Minneapolis in 1998, and has continued her education with a wide range of educators to actively keep herself challenged with different brands and techniques. Feel free to schedule a complimentary consultation to discuss your needs."
       ],
       schedule: "Jodi works Tuesdays, Fridays, and alternating Thursdays & Saturdays and welcomes scheduling appointments in advance.",
       phone: "206-486-6566",
@@ -69,13 +70,15 @@ export function getStylists(stylist) {
       name: 'Tina',
       position: 'Stylist',
       bio: [
-        "After working with a diverse clientele at a non-profit agency, as well as studying Social Science at the University of Washington, Tina finally decided to pursue her true passion in the hair industry.  During her career, she has mastered a wide range of techniques that allow her to create personalized looks to showcase your best features. Tina excels working with long hair and curls and loves working with rich color tones and dimension. In addition to her extensive knowledge with cutting and coloring, Tina also specializes in performing the Coppola Keratin Complex Smoothing System and is fantastic with makeup. Tina is committed to hard work, continued education and being the best at what she does but also  enjoys taking time out of work to relax, travel and check out live music when she can."
+        "After working with a diverse clientele at a non-profit agency, as well as studying Social Science at the University of Washington, Tina finally decided to pursue her true passion in the hair industry. During her career, she has mastered a wide range of techniques that allow her to create personalized looks to showcase your best features.",
+        "Tina excels working with long hair and curls and loves working with rich color tones and dimension. In addition to her extensive knowledge with cutting and coloring, Tina also specializes in performing the Coppola Keratin Complex Smoothing System and is fantastic with makeup.",
+        "Tina is committed to hard work, continued education and being the best at what she does but also  enjoys taking time out of work to relax, travel and check out live music when she can."
       ],
       phone: "425-502-5174"
     },
     {
       image: Lelia,
-      name: 'Leilia',
+      name: 'Lelia',
       position: 'Stylist',
       bio: [
         "Lelia Singleton is our resident “mixologist”. She loves concocting special cocktails of color much like she used to tend bar. She is the ultimate multi tasker! Lelia brings a no nonsense, get it done east coast mentality to her work and fuses it with her laid back Hawaiian attitude. Both areas she used to call home.",
@@ -131,7 +134,9 @@ export function getStylists(stylist) {
       name: 'Hana',
       position: 'Stylist',
       bio: [
-        "Being a stylist for 9 years, I have accomplished so much but I learn something new every day that is what keeps me passionate about this industry. I am always looking to learn and gather more influence from those around me and by constantly continuing my education. I do a wide range of color services including foiling and balayage as well as keeping up with the latest trends in styles and cuts. I have specialized in Hot Heads Hair extensions for the last 3 years. I love working with extensions because there are so many ways you can utilize them, from adding length, volume, or both as well as using them for a temporary accent color. Also clients that are experiencing thinning hair and hair loss have had wonderful results with these extensions. I have experience doing special occasion styling with small and large bridal parties. As an independent stylist I have the opportunity to collaborate with the bride to customize their style whether they are in the salon or on location. Creating lasting relationships with clients is one of the best parts of being a stylist. Communication is most important to ensure that you leave with the style love."
+        "Being a stylist for 9 years, I have accomplished so much but I learn something new every day that is what keeps me passionate about this industry. I am always looking to learn and gather more influence from those around me and by constantly continuing my education. I do a wide range of color services including foiling and balayage as well as keeping up with the latest trends in styles and cuts.",
+        "I have specialized in Hot Heads Hair extensions for the last 3 years. I love working with extensions because there are so many ways you can utilize them, from adding length, volume, or both as well as using them for a temporary accent color. Also clients that are experiencing thinning hair and hair loss have had wonderful results with these extensions.",
+        "I have experience doing special occasion styling with small and large bridal parties. As an independent stylist I have the opportunity to collaborate with the bride to customize their style whether they are in the salon or on location. Creating lasting relationships with clients is one of the best parts of being a stylist. Communication is most important to ensure that you leave with the style love."
       ],
       phone: "206-856-8569",
       email: 'hasumner23@gmail.com',
@@ -255,7 +260,9 @@ export function getStylists(stylist) {
       name: 'Alysia',
       position: 'Stylist',
       bio: [
-        "Loving what it do is an understatement. My passion for the beauty industry started when I was just 17 years old while working at Karin's Beauty Supplies retailing professional products. I graduated from Toni & Guy Hairdressing Academy in 2012. After graduation I immediately started as a 6 month apprenticeship at Domino Beauty Boutique where I remained a busy Stylist, Colorist and Makeup artist for almost four years. Whithin that four years, I have established a niche for Creative Color, Balayage, fun haircuts, and makeup applications. Advancing my education to keep up with the ever changing ways of hair is a must. I have attended many advanced education classes over the years, here are a few: Mens Barbering, Kaeratin Complex, S.R Cutting classes (men, women and creative), Advanced Glo Minerals Makeup application, and have extensive color education with Davines as well as Pravana Vivids creative color. I use Davines color because I love that they care about the earth and sustaining beauty. Check them out! I offer onsite and in salon bridal services and special event styling with a consultation. Please feel free to check out my Instagram for pictures of my work @a.ransombeauty as well as reach me personally to ask any questions and to book your next service."
+        "Loving what it do is an understatement. My passion for the beauty industry started when I was just 17 years old while working at Karin's Beauty Supplies retailing professional products. I graduated from Toni & Guy Hairdressing Academy in 2012. After graduation I immediately started as a 6 month apprenticeship at Domino Beauty Boutique where I remained a busy Stylist, Colorist and Makeup artist for almost four years. Within those four years, I have established a niche for Creative Color, Balayage, fun haircuts, and makeup applications.",
+        "Advancing my education to keep up with the ever changing ways of hair is a must. I have attended many advanced education classes over the years, here are a few: Mens Barbering, Kaeratin Complex, S.R Cutting classes (men, women and creative), Advanced Glo Minerals Makeup application, and have extensive color education with Davines as well as Pravana Vivids creative color. I use Davines color because I love that they care about the earth and sustaining beauty. Check them out!",
+        "I offer onsite and in salon bridal services and special event styling with a consultation. Please feel free to check out my Instagram for pictures of my work @a.ransombeauty as well as reach me personally to ask any questions and to book your next service."
       ],
       phone: "206-446-7093",
       email: "alysia.ransom@gmail.com",
