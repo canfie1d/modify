@@ -13,7 +13,7 @@ export default class PageTemplate extends React.Component {
         <div className='page-wrapper'>
           <Header />
           <main className='page__content'>
-            <ScrollToTop offset={100} />
+            <ScrollToTop offset={80} />
             <Routes {...this.props} />
           </main>
         </div>
