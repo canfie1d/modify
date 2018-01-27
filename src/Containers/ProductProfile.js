@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import ProductProfile from '../Pages/ProductProfile';
+import LoadableProductProfile from './LoadableProductProfile';
 import { setCurrentProduct } from '../Actions/productProfile.js';
 
 function mapStateToProps(state) {
@@ -18,4 +18,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ProductProfile);
+)(LoadableProductProfile);
