@@ -2,14 +2,19 @@
   display: flex;
   flex-wrap: wrap;
   margin: auto;
-
-  +screen($media-small $media-medium) {
-    min-width: 100%;
-  }
 }
 
 .form__column {
   flex: 1 1 100%;
+
+  +screen($media-small $media-medium) {
+
+    &:first-of-type {
+      flex: 1 1 50%;
+      padding-right: 20px;
+    }
+
+  }
 
   .button {
     width: 100%;
@@ -18,24 +23,13 @@
     display: block;
   }
 
-  +screen($media-small $media-medium) {
-    &:not(:last-of-type) {
-      flex: 1 1 50%;
-    }
-
-    &:first-of-type {
-      padding-right: 20px;
-    }
-
-  }
-
 }
 
 .label {
   font-size: 20px;
   font-family: $display-font;
   display: block;
-  padding: 0 0 12px 12px;
+  padding: 0 0 12px 0;
 }
 
 .input {
@@ -70,5 +64,9 @@
   &:focus {
     outline: none;
     border: 1px solid $black;
+  }
+
+  +screen($media-small $media-medium) {
+    min-height: 182px;
   }
 }

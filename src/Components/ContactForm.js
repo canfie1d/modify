@@ -45,37 +45,37 @@ export default class ContactForm extends React.Component {
     return (
       <form className='form' onSubmit={this.handleSubmit}>
         <div className='form__column'>
-          <label className='label' htmlFor='name'>Name</label>
+          <label className='label' htmlFor='name'>What's your name?</label>
           <input
             id='name'
             name='name'
             type='text'
             className='input'
-            placeholder="What is your name?"
+            placeholder="Enter your name"
             value={this.state.name}
             onChange={this.handleChange}
             required
           />
-          <label className='label' htmlFor='email'>Email</label>
+          <label className='label' htmlFor='email'>What's your email address?</label>
           <input
             id='email'
             name='email'
             type='email'
             className='input'
-            placeholder="What is your email? (we keep this very private)"
+            placeholder="Enter your email"
             value={this.state.email}
             onChange={this.handleChange}
             required
           />
         </div>
         <div className='form__column m-b-50'>
-          <label className='label' htmlFor='message'>Message</label>
+          <label className='label' htmlFor='message'>How can we help?</label>
           <textarea
             id='message'
             name='message'
             className='textarea'
             rows={5}
-            placeholder="How can we help?"
+            placeholder="Enter your message"
             value={this.state.message}
             onChange={this.handleChange}
             required

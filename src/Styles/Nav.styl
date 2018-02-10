@@ -19,6 +19,17 @@ nav {
 
       a {
         padding: 0;
+        transition: transform 200ms ease;
+        background: $white;
+
+        &.current {
+          outline: none;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+          outline: none;
+        }
       }
     }
   }
@@ -27,7 +38,7 @@ nav {
     display: block;
     height: 50px;
     padding: 19px 8px;
-
+    overflow: hidden;
     font-family: $display-font;
     font-size: 14px;
     color: $black;
@@ -38,6 +49,8 @@ nav {
     &:hover {
       outline: 1px solid rgba($black, .5);
     }
+
+
 
     &.current {
       background: $black;
@@ -63,6 +76,7 @@ nav {
     }
   }
 }
+
 +min-screen($media-medium) {
   nav {
     height: 80px;

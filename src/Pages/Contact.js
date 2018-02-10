@@ -41,7 +41,7 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div className='content-flex'>
-        <p className='p p--dark m-b-50'>If you need anything at all, don't hesitate to send us a message and we'll get back to you as soon as we can!</p>
+        <p className='p p--dark m-b-100'>If you need anything at all, don't hesitate to send us a message and we'll get back to you as soon as we can!</p>
         {this.renderFormMessage()}
         <div className='contact'>
           <div className='contact-column'>
