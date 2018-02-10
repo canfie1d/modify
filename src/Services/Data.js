@@ -1,30 +1,10 @@
-import gallery1 from '../Assets/Images/Gallery/gallery1.jpg';
-import gallery2 from '../Assets/Images/Gallery/gallery2.jpg';
-import gallery3 from '../Assets/Images/Gallery/gallery3.jpg';
-import gallery4 from '../Assets/Images/Gallery/gallery4.jpg';
-import gallery5 from '../Assets/Images/Gallery/gallery5.jpg';
-import gallery6 from '../Assets/Images/Gallery/gallery6.jpg';
-import gallery7 from '../Assets/Images/Gallery/gallery7.jpg';
-import gallery8 from '../Assets/Images/Gallery/gallery8.jpg';
-import gallery9 from '../Assets/Images/Gallery/gallery9.jpg';
-import gallery10 from '../Assets/Images/Gallery/gallery10.jpg';
-import gallery11 from '../Assets/Images/Gallery/gallery11.jpg';
-import gallery12 from '../Assets/Images/Gallery/gallery12.jpg';
-
-import kevinmurphy from '../Assets/Images/Products/kevinmurphy.jpg';
-import evo from '../Assets/Images/Products/evo.svg';
-import onesta from '../Assets/Images/Products/onesta.png';
-import kevinMurphyProduct from '../Assets/Images/Products/kevinmurphy-product.jpg';
-import evoProduct from '../Assets/Images/Products/evo-product.png';
-import onestaProduct from '../Assets/Images/Products/onesta-product.png';
-
 export function getProducts(product) {
   const productList = [
     {
       id: 'kevinmurphy',
       name: 'KEVIN.MURPHY',
-      image: kevinmurphy,
-      productImage: kevinMurphyProduct,
+      image: "https://s3.amazonaws.com/modifyhair-images/product/kevinmurphy.jpg",
+      productImage: "https://s3.amazonaws.com/modifyhair-images/product/kevinmurphy-product.jpg",
       alt: "Kevin Murphy Logo",
       desc: [
         "Born from the same philosophy as skincare, KEVIN.MURPHY products are WEIGHTLESSLY designed to deliver PERFORMANCE, STRENGTH and LONGEVITY.",
@@ -35,8 +15,8 @@ export function getProducts(product) {
     {
       id: 'evo',
       name: 'EVO',
-      image: evo,
-      productImage: evoProduct,
+      image: "https://s3.amazonaws.com/modifyhair-images/product/evo.svg",
+      productImage: "https://s3.amazonaws.com/modifyhair-images/product/evo-product.png",
       alt: "EVO Logo",
       desc: [
         "evo is an innovative, professional hair and beauty product manufacturer with individuality and integrity; a manufacturer that speaks the truth.",
@@ -48,8 +28,8 @@ export function getProducts(product) {
     {
       id: 'onesta',
       name: 'ONESTA',
-      image: onesta,
-      productImage: onestaProduct,
+      image: "https://s3.amazonaws.com/modifyhair-images/product/onesta.png",
+      productImage: "https://s3.amazonaws.com/modifyhair-images/product/onesta-product.png",
       alt: "ONESTA Logo",
       desc: [
         "Onesta knows that by enjoying nature’s offerings they must do their part to protect our world’s resources and be ecologically sustainable. This mission of environmental responsibility is at the core of what they do at Onesta.",
@@ -72,51 +52,51 @@ export function getProducts(product) {
 
 export const GALLERY_IMAGES = [
   {
-    image: gallery1,
+    image: "https://s3.amazonaws.com/modifyhair-images/gallery/gallery1.jpg",
     alt: "stylist station by window with large mirror"
   },
   {
-    image: gallery2,
+    image: "https://s3.amazonaws.com/modifyhair-images/gallery/gallery2.jpg",
     alt: "hair product close-up"
   },
   {
-    image: gallery4,
+    image: "https://s3.amazonaws.com/modifyhair-images/gallery/gallery3.jpg",
     alt: "shampoo and conditioner close-up"
   },
   {
-    image: gallery6,
+    image: "https://s3.amazonaws.com/modifyhair-images/gallery/gallery4.jpg",
     alt: "front desk next to two shampoo bowls"
   },
   {
-    image: gallery5,
+    image: "https://s3.amazonaws.com/modifyhair-images/gallery/gallery5.jpg",
     alt: "stylist station close-up"
   },
   {
-    image: gallery3,
+    image: "https://s3.amazonaws.com/modifyhair-images/gallery/gallery6.jpg",
     alt: "entry to the salon with seating area"
   },
   {
-    image: gallery7,
+    image: "https://s3.amazonaws.com/modifyhair-images/gallery/gallery7.jpg",
     alt: "another angle of entry to the salon"
   },
   {
-    image: gallery9,
+    image: "https://s3.amazonaws.com/modifyhair-images/gallery/gallery8.jpg",
     alt: "stylist stations with large mirrors and leather chairs"
   },
   {
-    image: gallery8,
+    image: "https://s3.amazonaws.com/modifyhair-images/gallery/gallery9.jpg",
     alt: "wide shot of the salon and stylist stations"
   },
   {
-    image: gallery10,
+    image: "https://s3.amazonaws.com/modifyhair-images/gallery/gallery10.jpg",
     alt: "another angle of salon and stylist stations"
   },
   {
-    image: gallery11,
+    image: "https://s3.amazonaws.com/modifyhair-images/gallery/gallery11.jpg",
     alt: "stylist station near a window"
   },
   {
-    image: gallery12,
+    image: "https://s3.amazonaws.com/modifyhair-images/gallery/gallery12.jpg",
     alt: "stylist station close-up"
   }
 ];
@@ -168,6 +148,6 @@ export const SERVICES = [
   },
   {
     name: "Keratin Smoothing System",
-    cost: "Upon Consult (Tina & Alysia only)"
+    cost: "Upon Consult (Tina only)"
   }
 ];

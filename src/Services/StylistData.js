@@ -1,19 +1,7 @@
-import Jodi from '../Assets/Images/Stylists/jodi.jpg';
-import Tina from '../Assets/Images/Stylists/avatar.jpg';
-import Lelia from '../Assets/Images/Stylists/lelia.jpg';
-import Hana from '../Assets/Images/Stylists/hana.jpg';
-import Polly from '../Assets/Images/Stylists/polly.jpg';
-import Sarah from '../Assets/Images/Stylists/avatar.jpg';
-import Dusty from '../Assets/Images/Stylists/dusty.jpg';
-import Gayle from '../Assets/Images/Stylists/gayle.jpg';
-import Alysia from '../Assets/Images/Stylists/alysia.jpg';
-import Robin from '../Assets/Images/Stylists/robin.jpg';
-import Mitch from '../Assets/Images/Stylists/mitch.jpg';
-
 export function getStylists(stylist) {
   const stylistList = [
     {
-      image: Jodi,
+      image: 'https://s3.amazonaws.com/modifyhair-images/stylists/jodi.jpg',
       name: 'Jodi',
       position: 'Owner & Stylist',
       bio: [
@@ -66,18 +54,7 @@ export function getStylists(stylist) {
       ]
     },
     {
-      image: Tina,
-      name: 'Tina',
-      position: 'Stylist',
-      bio: [
-        "After working with a diverse clientele at a non-profit agency, as well as studying Social Science at the University of Washington, Tina finally decided to pursue her true passion in the hair industry. During her career, she has mastered a wide range of techniques that allow her to create personalized looks to showcase your best features.",
-        "Tina excels working with long hair and curls and loves working with rich color tones and dimension. In addition to her extensive knowledge with cutting and coloring, Tina also specializes in performing the Coppola Keratin Complex Smoothing System and is fantastic with makeup.",
-        "Tina is committed to hard work, continued education and being the best at what she does but also  enjoys taking time out of work to relax, travel and check out live music when she can."
-      ],
-      phone: "425-502-5174"
-    },
-    {
-      image: Lelia,
+      image: 'https://s3.amazonaws.com/modifyhair-images/stylists/lelia.jpg',
       name: 'Lelia',
       position: 'Stylist',
       bio: [
@@ -130,7 +107,7 @@ export function getStylists(stylist) {
       ]
     },
     {
-      image: Hana,
+      image: 'https://s3.amazonaws.com/modifyhair-images/stylists/hana.jpg',
       name: 'Hana',
       position: 'Stylist',
       bio: [
@@ -184,7 +161,7 @@ export function getStylists(stylist) {
       ]
     },
     {
-      image: Polly,
+      image: 'https://s3.amazonaws.com/modifyhair-images/stylists/polly.png',
       name: 'Polly',
       position: 'Stylist',
       bio: [
@@ -193,26 +170,7 @@ export function getStylists(stylist) {
       phone: "206-910-8680"
     },
     {
-      image: Sarah,
-      name: 'Sarah',
-      position: 'Stylist',
-      bio: [
-        ""
-      ],
-      phone: "206-235-8304"
-    },
-    {
-      image: Dusty,
-      name: 'Dusty',
-      position: 'Stylist',
-      bio: [
-        "Arizona native recently transplanted to the beautiful Pacific Northwest! I graduated from Brillare Hairdressing Academy in 2012, where I had the privilege to learn from some of Arizona's top stylists. I immediately found my home at a busy Aveda salon in Tempe, Arizona, where I worked my way up to earn the title of Senior Stylist and Educator. While at Mood Swings Salon, I had the opportunity to refine my craft and learn new techniques from numerous successful stylists.",
-        "I am excited to settle into my new home here in the Wallingford neighborhood, and to fill my chair with beautiful smiling faces! I specialize in short women's cuts, men's scissor cuts, balayage, and blondes! I see each guest based on personal style, hair type and lifestyle. I would love to get to know you and make you look and feel your absolute best!"
-      ],
-      website: "http://dustywynn.com"
-    },
-    {
-      image: Gayle,
+      image: 'https://s3.amazonaws.com/modifyhair-images/stylists/gayle.jpg',
       name: 'Gayle',
       position: 'Stylist',
       bio: [
@@ -256,61 +214,17 @@ export function getStylists(stylist) {
       ]
     },
     {
-      image: Alysia,
-      name: 'Alysia',
+      image: 'https://s3.amazonaws.com/modifyhair-images/stylists/dusty.jpg',
+      name: 'Dusty',
       position: 'Stylist',
       bio: [
-        "Loving what it do is an understatement. My passion for the beauty industry started when I was just 17 years old while working at Karin's Beauty Supplies retailing professional products. I graduated from Toni & Guy Hairdressing Academy in 2012. After graduation I immediately started as a 6 month apprenticeship at Domino Beauty Boutique where I remained a busy Stylist, Colorist and Makeup artist for almost four years. Within those four years, I have established a niche for Creative Color, Balayage, fun haircuts, and makeup applications.",
-        "Advancing my education to keep up with the ever changing ways of hair is a must. I have attended many advanced education classes over the years, here are a few: Mens Barbering, Kaeratin Complex, S.R Cutting classes (men, women and creative), Advanced Glo Minerals Makeup application, and have extensive color education with Davines as well as Pravana Vivids creative color. I use Davines color because I love that they care about the earth and sustaining beauty. Check them out!",
-        "I offer onsite and in salon bridal services and special event styling with a consultation. Please feel free to check out my Instagram for pictures of my work @a.ransombeauty as well as reach me personally to ask any questions and to book your next service."
+        "Arizona native recently transplanted to the beautiful Pacific Northwest! I graduated from Brillare Hairdressing Academy in 2012, where I had the privilege to learn from some of Arizona's top stylists. I immediately found my home at a busy Aveda salon in Tempe, Arizona, where I worked my way up to earn the title of Senior Stylist and Educator. While at Mood Swings Salon, I had the opportunity to refine my craft and learn new techniques from numerous successful stylists.",
+        "I am excited to settle into my new home here in the Wallingford neighborhood, and to fill my chair with beautiful smiling faces! I specialize in short women's cuts, men's scissor cuts, balayage, and blondes! I see each guest based on personal style, hair type and lifestyle. I would love to get to know you and make you look and feel your absolute best!"
       ],
-      phone: "206-446-7093",
-      email: "alysia.ransom@gmail.com",
-      pricing: [
-        {
-          desc: "Women's Cut",
-          cost: "$55"
-        },
-        {
-          desc: "Men's Cut",
-          cost: "$45"
-        },
-        {
-          desc: "Partial Foil",
-          cost: "$130"
-        },
-        {
-          desc: "Full Foil",
-          cost: "$150"
-        },
-        {
-          desc: "Kid's Cut",
-          cost: "$30"
-        },
-        {
-          desc: "Retouch",
-          cost: "$70+"
-        },
-        {
-          desc: "All Over Color",
-          cost: "$85+"
-        },
-        {
-          desc: "Balayage",
-          cost: "$150+"
-        },
-        {
-          desc: "Ombre",
-          cost: "$150+"
-        },
-        {
-          desc: "Face Frame",
-          cost: "$70"
-        }
-      ]
+      website: "http://dustywynn.com"
     },
     {
-      image: Robin,
+      image: 'https://s3.amazonaws.com/modifyhair-images/stylists/robin.jpg',
       name: 'Robin',
       position: 'Stylist',
       bio: [
@@ -382,7 +296,7 @@ export function getStylists(stylist) {
       ]
     },
     {
-      image: Mitch,
+      image: 'https://s3.amazonaws.com/modifyhair-images/stylists/mitch.jpg',
       name: 'Mitch',
       position: 'Stylist',
       bio: [
@@ -456,6 +370,26 @@ export function getStylists(stylist) {
           cost: "$10"
         }
       ]
+    },
+    {
+      image: 'https://s3.amazonaws.com/modifyhair-images/stylists/avatar.jpg',
+      name: 'Tina',
+      position: 'Stylist',
+      bio: [
+        "After working with a diverse clientele at a non-profit agency, as well as studying Social Science at the University of Washington, Tina finally decided to pursue her true passion in the hair industry. During her career, she has mastered a wide range of techniques that allow her to create personalized looks to showcase your best features.",
+        "Tina excels working with long hair and curls and loves working with rich color tones and dimension. In addition to her extensive knowledge with cutting and coloring, Tina also specializes in performing the Coppola Keratin Complex Smoothing System and is fantastic with makeup.",
+        "Tina is committed to hard work, continued education and being the best at what she does but also  enjoys taking time out of work to relax, travel and check out live music when she can."
+      ],
+      phone: "425-502-5174"
+    },
+    {
+      image: 'https://s3.amazonaws.com/modifyhair-images/stylists/avatar.jpg',
+      name: 'Sarah',
+      position: 'Stylist',
+      bio: [
+        ""
+      ],
+      phone: "206-235-8304"
     }
   ];
 
