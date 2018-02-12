@@ -23,16 +23,15 @@ export default class ContactForm extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
-      .then(() => this.props.formSent())
+      .then(() => {
+        this.props.formSent()
+        this.setState({
+          name: "",
+          email: "",
+          message: ""
+        });
+      })
       .catch(error => this.props.formSent(error));
-
-    if (this.props.formSent && this.props.formError === null) {
-      this.setState({
-        name: "",
-        email: "",
-        message: ""
-      });
-    }
 
     e.preventDefault();
   };
