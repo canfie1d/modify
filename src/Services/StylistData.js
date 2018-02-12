@@ -372,7 +372,7 @@ export function getStylists(stylist) {
       ]
     },
     {
-      image: 'https://s3.amazonaws.com/modifyhair-images/stylists/avatar.jpg',
+      image: 'https://s3.amazonaws.com/modifyhair-images/stylists/tina.jpg',
       name: 'Tina',
       position: 'Stylist',
       bio: [
