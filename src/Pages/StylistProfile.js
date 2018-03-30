@@ -37,7 +37,7 @@ export default class StylistProfile extends React.Component {
     const maleStylist = stylist.name === "Mitch";
 
     const websiteText = <span key='websiteText'>visit {maleStylist ? 'his' : 'her'} <a className='profile__link' href={stylist.website}>website</a></span>;
-    const phoneText = <span key='phoneText'>call {maleStylist ? 'him' : 'her'} at <a className='profile__link' href={`tel:${stylist.phone}`}>{stylist.phone}</a></span>;
+    const phoneText = <span key='phoneText'>call{stylist.name !== "Robin" ? '/text' : null} {maleStylist ? 'him' : 'her'} at <a className='profile__link' href={`tel:${stylist.phone}`}>{stylist.phone}</a></span>;
     const emailText = <span key='emailText'>send {maleStylist ? 'him' : 'her'} an <a href={`mailto:${stylist.email}`}>email</a></span>;
 
     const emailPhoneAndWebsite = stylist.website && stylist.email && stylist.phone;

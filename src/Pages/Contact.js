@@ -2,6 +2,7 @@ import React from 'react';
 import ContactForm from '../Components/ContactForm';
 import Map from '../Components/Map';
 import { MAP_STYLES } from '../Services/MapStyles';
+import { Link } from 'react-router-dom';
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -41,7 +42,8 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div className='content-flex'>
-        <p className='p p--dark m-b-100'>If you need anything at all, don't hesitate to send us a message and we'll get back to you as soon as we can!</p>
+        <p className='p p--dark'>If you need anything at all, don't hesitate to send us a message and we'll get back to you as soon as we can!</p>
+        <p className='p p--dark m-b-100'>To contact one of the stylists directly, use their preferred method of contact listed on their <Link to='/stylists'>stylist profile</Link>.</p>
         {this.renderFormMessage()}
         <div className='contact'>
           <div className='contact-column'>

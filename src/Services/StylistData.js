@@ -167,7 +167,7 @@ export function getStylists(stylist) {
       bio: [
         ""
       ],
-      phone: "206-910-8680"
+      email: "polly22johnson@yahoo.com"
     },
     {
       image: 'https://s3.amazonaws.com/modifyhair-images/stylists/gayle.jpg',
