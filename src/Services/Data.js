@@ -148,6 +148,6 @@ export const SERVICES = [
   },
   {
     name: "Keratin Smoothing System",
-    cost: "Upon Consult (Tina only)"
+    cost: "Upon Consult (Tina and Hana only)"
   }
 ];

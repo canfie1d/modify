@@ -112,7 +112,7 @@ export function getStylists(stylist) {
       position: 'Stylist',
       bio: [
         "Being a stylist for 9 years, I have accomplished so much but I learn something new every day that is what keeps me passionate about this industry. I am always looking to learn and gather more influence from those around me and by constantly continuing my education. I do a wide range of color services including foiling and balayage as well as keeping up with the latest trends in styles and cuts.",
-        "I have specialized in Hot Heads Hair extensions for the last 3 years. I love working with extensions because there are so many ways you can utilize them, from adding length, volume, or both as well as using them for a temporary accent color. Also clients that are experiencing thinning hair and hair loss have had wonderful results with these extensions.",
+        "I have specialized in Hot Heads Hair extensions for the last 7 years. I love working with extensions because there are so many ways you can utilize them, from adding length, volume, or both as well as using them for a temporary accent color. Also clients that are experiencing thinning hair and hair loss have had wonderful results with these extensions.",
         "I have experience doing special occasion styling with small and large bridal parties. As an independent stylist I have the opportunity to collaborate with the bride to customize their style whether they are in the salon or on location. Creating lasting relationships with clients is one of the best parts of being a stylist. Communication is most important to ensure that you leave with the style love."
       ],
       phone: "206-856-8569",
@@ -156,7 +156,7 @@ export function getStylists(stylist) {
         },
         {
           desc: "Extensions",
-          cost: "By Consultation"
+          cost: "$250"
         }
       ]
     },
@@ -168,50 +168,6 @@ export function getStylists(stylist) {
         ""
       ],
       email: "polly22johnson@yahoo.com"
-    },
-    {
-      image: 'https://s3.amazonaws.com/modifyhair-images/stylists/gayle.jpg',
-      name: 'Gayle',
-      position: 'Stylist',
-      bio: [
-        "Gayle has been a stylist in the Queen Anne area for the last 25 years, and is happy and excited to call Modify her new home. She has clients that have been with her for as little as a year, to as long as 25 years. She loves doing color work and finding the perfect pallet to complement your perfect style. She listens to what you want and makes suggestions based on your wants and needs, but lets you know what will work best for you too!",
-        "When not at work, Gayle is a busy mom of a 14 year old girl and a 10 year old boy. When not running to soccer or basketball games, she and her family are off camping and enjoying family life. Gayle is happily accepting new clients as well."
-      ],
-      phone: "206-601-8215",
-      pricing: [
-        {
-          desc: "Women's Cut",
-          cost: "$60"
-        },
-        {
-          desc: "Men's Cut",
-          cost: "$55"
-        },
-        {
-          desc: "Cut & Color",
-          cost: "$125+"
-        },
-        {
-          desc: "Retouch",
-          cost: "$70+"
-        },
-        {
-          desc: "All Over Color",
-          cost: "$90+"
-        },
-        {
-          desc: "Partial Foil",
-          cost: "$100+"
-        },
-        {
-          desc: "Full Foil",
-          cost: "$130+"
-        },
-        {
-          desc: "Color Retouch with Partial Foil",
-          cost: "$150+"
-        }
-      ]
     },
     {
       image: 'https://s3.amazonaws.com/modifyhair-images/stylists/dusty.jpg',
