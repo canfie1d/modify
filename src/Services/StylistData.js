@@ -58,15 +58,15 @@ export function getStylists(stylist) {
       name: 'Lelia',
       position: 'Stylist',
       bio: [
-        "Lelia Singleton is our resident “mixologist”. She loves concocting special cocktails of color much like she used to tend bar. She is the ultimate multi tasker! Lelia brings a no nonsense, get it done east coast mentality to her work and fuses it with her laid back Hawaiian attitude. Both areas she used to call home.",
-        "Lelia is excellent in all areas of hairdressing. While she loves blonds, brunettes, grey coverage and classic haircutting, Lelia has a special affection for razor cutting with a straight edge, beautiful red toned colors, Ombré, fun color placement techniques, and men's cuts. Give Lelia a try if you love a person that is very outgoing, exuberant, and will make you the focus of their attention."
+        "Lelia Carroll is our resident “mixologist”. She loves concocting special cocktails of color much like she used to tend bar. She is the ultimate multi tasker! Lelia brings a no nonsense, get it done east coast mentality to her work and fuses it with her laid back Hawaiian attitude. Both areas she used to call home.",
+        "Lelia is excellent in all areas of hairdressing. While she loves blondes, brunettes, grey coverage and classic haircutting, Lelia has a special affection for razor cutting with a straight edge, beautiful red toned colors, Foilyage, Balyage, and Ombré, fun color placement techniques, and men's cuts. Give Lelia a try if you love a person that is very outgoing, exuberant, and will make you the focus of their attention."
       ],
       contact: "Lelia works Wednesday, Friday and every other Saturday. She welcomes scheduling appointments in advance and loves to take walk-ins when she can!",
       phone: "206-919-7805",
       pricing: [
         {
           desc: "Women's Cut",
-          cost: "$65"
+          cost: "$75"
         },
         {
           desc: "Men's Cut",
@@ -78,27 +78,35 @@ export function getStylists(stylist) {
         },
         {
           desc: "Root Retouch",
-          cost: "$75+"
-        },
-        {
-          desc: "Cellophane",
           cost: "$85+"
         },
         {
+          desc: "Cellophane",
+          cost: "$95+"
+        },
+        {
           desc: "Single Process Color",
-          cost: "$105+"
+          cost: "$115+"
         },
         {
           desc: "Partial Foil",
-          cost: "$165+"
+          cost: "$175+"
         },
         {
           desc: "Full Foil",
-          cost: "$175+"
+          cost: "$185+"
         },
         {
-          desc: "Ombré/Balyage",
-          cost: "$175+"
+          desc: "Balyage/Ombré",
+          cost: "$185+"
+        },
+        {
+          desc: "Foilyage",
+          cost: "$220+"
+        },
+        {
+          desc: "Toner",
+          cost: "$45+"
         },
         {
           desc: "Extra Product Charge",
