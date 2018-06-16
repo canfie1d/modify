@@ -1,32 +1,15 @@
 import React from 'react';
 import Nav from './Nav';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { toggleNavFixedState } from '../Actions/Nav.js';
-
-function mapStateToProps(state) {
-  return {
-    navFixed: state.nav.navFixed
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({
-    toggleNavFixedState
-  }, dispatch);
-}
+import { withRouter } from 'react-router';
 
 class Header extends React.PureComponent {
   render() {
     return (
       <header>
-        <Nav toggleNavFixedState={this.props.toggleNavFixedState} navFixed={this.props.navFixed} location={this.props.location.pathname} />
+        <Nav />
       </header>
     );
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Header);
+export default withRouter(Header);

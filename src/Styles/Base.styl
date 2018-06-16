@@ -38,11 +38,19 @@ body {
   }
 
   &.p--success {
-    color: $status--success;
+    color: $white;
+    font-weight: 700;
+    background: $status--success;
+    padding: 10px 20px;
+    border-radius: 28px;
   }
 
   &.p--error {
-    color: $status--error;
+    color: $white;
+    font-weight: 700;
+    background: $status--error;
+    padding: 10px 20px;
+    border-radius: 28px;
   }
 
   &.p--small {
@@ -51,6 +59,10 @@ body {
 
   &.p--align-left {
     text-align: left;
+  }
+
+  &.p--center {
+    text-align: center;
   }
 
   &.p--align-right {
@@ -67,6 +79,10 @@ body {
   margin-bottom: 100px;
 }
 
+.m-b-200 {
+  margin-bottom: 200px;
+}
+
 .indent {
   margin-left: 8px;
 }
@@ -78,6 +94,16 @@ a {
     outline: 1px solid rgba($black, .5);
   }
 
+}
+
+.a {
+  font-family: $display-font;
+  font-size: 20px;
+
+  &.a--center {
+    display: block;
+    text-align: center;
+  }
 }
 
 .visually-hidden {

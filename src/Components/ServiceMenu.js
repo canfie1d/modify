@@ -1,22 +1,21 @@
 import React from 'react';
-import { getServices } from '../Services/Data';
+import { SERVICES } from '../Services/Data';
 
 export default class ServiceMenu extends React.Component {
 
   renderServices() {
-    let servicesDomArr = [];
-    let servicesArr = getServices();
+    let services = [];
 
-    for (let i = 0; i < servicesArr.length; i++) {
-      servicesDomArr.push(
+    for (let i = 0; i < SERVICES.length; i++) {
+      services.push(
         <li key={`service-item-${i}`} className='service__item'>
-          <span className='service__name'>{servicesArr[i].name}</span>
-          <span className='service__cost'>{servicesArr[i].cost}</span>
+          <span className='service__name'>{SERVICES[i].name}</span>
+          <span className='service__cost'>{SERVICES[i].cost}</span>
         </li>
       );
     }
 
-    return servicesDomArr;
+    return services;
   }
 
   render() {

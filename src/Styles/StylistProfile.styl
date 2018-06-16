@@ -8,6 +8,11 @@ $imageWidth= 280px;
   +min-screen($media-medium) {
     flex-wrap: wrap;
   }
+
+  &.profile--column {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .profile__column {
@@ -50,32 +55,32 @@ $imageWidth= 280px;
   padding-bottom: 20px;
 }
 
-.profile__instagram {
-  display: inline-block;
-}
-
 .profile__link {
   white-space: nowrap;
 }
 
 .profile__image {
-  width: $imageWidth;
+  width: 100%;
+  max-width: $imageWidth;
+
+  &.profile__image--wide {
+    max-width: "calc(%s * 2)" % $imageWidth;
+  }
 }
 
-.stylist__data {
-  width: $imageWidth;
+.profile__data {
+  max-width: $imageWidth * 2;
   margin: auto;
 }
 
 +max-screen($media-medium) {
   .profile__image {
     display: block;
-    margin: auto;
+    margin: 0 auto 50px;
   }
 
   .profile__name,
-  .profile__position,
-  .profile__instagram {
+  .profile__position {
     display: block;
     margin: auto;
     width: $imageWidth;
@@ -83,20 +88,7 @@ $imageWidth= 280px;
 }
 
 .profile__button {
-  position: relative;
-  display: inline-block;
-  margin-left: 20px;
-  height: 50px;
-
-  &.profile__button--fixed {
-    .nav-link__button {
-      position: fixed;
-      top: 50px;
-      left: 20px;
-
-      +min-screen($media-medium) {
-        top: 100px;
-      }
-    }
-  }
+  position: absolute;
+  top: 110px;
+  left: 20px;
 }

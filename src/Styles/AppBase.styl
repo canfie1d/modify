@@ -1,14 +1,14 @@
-.app__container {
-
-}
-
 .page-wrapper {
   position: relative;
   height: auto;
   width: 100%;
-  margin-top: calc(100vh - 100px);
+  margin-top: calc(100vh - 50px);
   box-sizing: content-box;
   background: $white;
+
+  +min-screen($media-medium) {
+    margin-top: calc(100vh - 80px);
+  }
 
   .page__content {
     max-width: 1260px;
@@ -20,6 +20,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 150px 20px 50px;
+  padding: 100px 20px 50px;
   min-height: 100vh;
 }

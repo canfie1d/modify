@@ -1,21 +1,21 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import StylistProfile from '../Pages/StylistProfile';
-import { setCurrentStylist } from '../Actions/stylistProfile.js';
+import ProductProfile from '../Pages/ProductProfile';
+import { setCurrentProduct } from '../Actions/productProfile.js';
 
 function mapStateToProps(state) {
   return {
-    currentStylist: state.profile.currentStylist
+    currentProduct: state.profile.currentProduct
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    setCurrentStylist
+    setCurrentProduct
   }, dispatch);
 }
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(StylistProfile);
+)(ProductProfile);
