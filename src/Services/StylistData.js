@@ -182,8 +182,8 @@ export function getStylists(stylist) {
       name: 'Dusty',
       position: 'Stylist',
       bio: [
-        "Arizona native recently transplanted to the beautiful Pacific Northwest! I graduated from Brillare Hairdressing Academy in 2012, where I had the privilege to learn from some of Arizona's top stylists. I immediately found my home at a busy Aveda salon in Tempe, Arizona, where I worked my way up to earn the title of Senior Stylist and Educator. While at Mood Swings Salon, I had the opportunity to refine my craft and learn new techniques from numerous successful stylists.",
-        "I am excited to settle into my new home here in the Wallingford neighborhood, and to fill my chair with beautiful smiling faces! I specialize in short women's cuts, men's scissor cuts, balayage, and blondes! I see each guest based on personal style, hair type and lifestyle. I would love to get to know you and make you look and feel your absolute best!"
+        "I started my career 6 years ago at Mood Swings Salon, a popular Aveda salon in Tempe, Arizona. While there, I had the opportunity to refine my craft and learn new techniques from a number of successful stylists.",
+        "My specialties are precision cuts, balayage, and blondes! I provide a customized look for each of my guests based on personal style, hair type and lifestyle. I look forward to making you look and feel your absolute best!"
       ],
       website: "http://dustywynn.com"
     },
@@ -272,10 +272,6 @@ export function getStylists(stylist) {
         {
           desc: "Haircut",
           cost: "$70"
-        },
-        {
-          desc: "Frequent Flyer Cut(under 4 weeks)",
-          cost: "$45"
         },
         {
           desc: "Youth Cut (4-17 yrs)",
