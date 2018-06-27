@@ -13,7 +13,7 @@ export default class Header extends React.Component {
 
       if (item) {
         stylistArr.push(
-          <div key={`item-${i}`} className='stylist-wrapper'>
+          <li key={`item-${i}`} className='stylist-wrapper'>
             <Link key={`stylist${i}`} to={`/stylists/${item.name.toLowerCase()}`} className='stylist'>
               <div className='stylist__img-wrapper'>
                 <img className='stylist__img' src={item.image} alt={`portrait of ${item.name}`} />
@@ -23,7 +23,7 @@ export default class Header extends React.Component {
                 <span className='stylist__info--position'>{item.position}</span>
               </div>
             </Link>
-          </div>
+          </li>
         );
       }
     }
@@ -33,9 +33,9 @@ export default class Header extends React.Component {
 
   render() {
     return (
-      <div className='stylist-gallery'>
+      <ul className='stylist-gallery'>
         {this.renderStylists()}
-      </div>
+      </ul>
     );
   }
 }

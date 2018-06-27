@@ -2,19 +2,68 @@ backend:
   name: github
   repo: canfie1d/modify
   branch: prod
-
+display_url: https://modifyhair.com
 media_folder: "public/assets/images/uploads" # Media files will be stored here
 public_folder: "static/media/images" # The src attribute for uploaded media
 publish_mode: editorial_workflow
 
-collections: # A list of collections the CMS should be able to edit
-  - name: "home-content"
-    label: "Home Content"
-    folder: "src/Content/Home"
-    create: true
-    slug: {{slug}}
-    fields:
-      [{label: Paragraph, name: paragraph, widget: string}]
+collections:
+  - name: "stylists" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Stylists" # Used in the UI
+    label_singular: "Stylist" # Used in the UI, ie: "New Post"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines that are specific to a collection.
+    folder: "_stylists"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mma"}
+      - {label: "Cover Image", name: "image", widget: "image", required: false, tagname: ""}
+      - {label: "Body", name: "body", widget: "markdown"}
+    meta:
+      - {label: "SEO Description", name: "description", widget: "text"} # A list of collections the CMS should be able to edit
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "../src/Content/Home/home-content.json"
+        fields:
+          - {label: Paragraph 1, name: paragraph1, widget: text}
+          - {label: Paragraph 2, name: paragraph2, widget: text}
+          - label: Photos
+            name: photos
+            widget: list
+            fields:
+              # - {label: Name, name: name, widget: string}
+              # - {label: Position, name: position, widget: string}
+              - {label: Photo, name: photo, widget: image}
+              - {label: Photo, name: photo, widget: image}
+              - {label: Photo, name: photo, widget: image}
+              - {label: Photo, name: photo, widget: image}
+              - {label: Photo, name: photo, widget: image}
+              - {label: Photo, name: photo, widget: image}
+              - {label: Photo, name: photo, widget: image}
+              - {label: Photo, name: photo, widget: image}
+              - {label: Photo, name: photo, widget: image}
+              - {label: Photo, name: photo, widget: image}
+              - {label: Photo, name: photo, widget: image}
+              - {label: Photo, name: photo, widget: image}
+      # - label: "Stylists Page"
+      #   name: "stylists"
+      #   file: "src/Content/Home/stylist-content.json"
+      #   fields:
+      #     - {label: Title, name: title, widget: string}
+      #     - {label: Intro, name: intro, widget: text}
+      #     - label: Team
+      #       name: team
+      #       widget: list
+      #       fields:
+      #         - {label: Name, name: name, widget: string}
+      #         - {label: Position, name: position, widget: string}
+      #         - {label: Photo, name: photo, widget: image}
 
   # - name: "home-images"
   #   label: "Home Images"
