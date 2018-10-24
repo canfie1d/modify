@@ -199,15 +199,23 @@ export function getStylists(stylist) {
       pricing: [
         {
           desc: "Haircut",
-          cost: "$65"
+          cost: "$75"
+        },
+        {
+          desc: "Express/Young Adult Cut",
+          cost: "$50"
         },
         {
           desc: "Kid's Cut (12-17 yrs)",
-          cost: "$40"
+          cost: "$35"
         },
         {
           desc: "Bang/Neck Trim",
-          cost: "$15 (complimentary between services)"
+          cost: "$15"
+        },
+        {
+          desc: "Shampoo & Blow Dry",
+          cost: "$40"
         },
         {
           desc: "Blowout",
@@ -218,24 +226,24 @@ export function getStylists(stylist) {
           cost: "$75+"
         },
         {
-          desc: "Face Frame Foil",
-          cost: "$65"
+          desc: "Framing Foil",
+          cost: "$75"
         },
         {
           desc: "Partial Foil",
-          cost: "$110+"
+          cost: "$115+"
         },
         {
           desc: "Full Foil",
-          cost: "$140+"
+          cost: "$150+"
         },
         {
           desc: "Custom Color",
-          cost: "$150+"
+          cost: "$175+"
         },
         {
           desc: "Bleach and Tone",
-          cost: "$150+"
+          cost: "$175+"
         },
         {
           desc: "Corrective Color",
