@@ -361,7 +361,7 @@ export function getStylists(stylist) {
     },
     {
       image: 'https://s3.amazonaws.com/modifyhair-images/stylists/avatar.jpg',
-      name: 'Shona',
+      name: 'Schona',
       position: 'Stylist',
       bio: [
         "We are all naturally beautiful. My approach as a stylist is to enhance the natural beauty everyone inhabits. I am a down to earth hairstylist and makeup artist who views her trade as an art form. Hair is my favorite canvas to create wearable works of art that fit into everyone's lifestyle. I love spending my day designing hair that can easily be styled, and looks good all the way up until your next appointment. Dramatic change, whether that's a different cut, new color, updo, or a makeup application is a space where I thrive and let my creativity flow. I take the time to truly look at you as a person: your bone structure, face shape, and how you carry yourself, to find the optimal haircut and/or color that enhances what makes you uniquely beautiful. You don't have to spend hours styling your hair to look good and my job is to match the amount of styling that fits your personality and lifestyle."
