@@ -1,44 +1,37 @@
 .service__list {
   display: flex;
+  justify-content: space-evenly;
   width: 100%;
   flex-wrap: wrap;
 }
 
 .service__item {
-  display: flex;
   flex: 1 0 100%;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 40px 0;
+  padding: 25px 0;
 
   &:nth-of-type(1) {
     padding-top: 0;
   }
 
   +min-screen($media-medium) {
+    flex: 1 0 50%;
+    padding: 50px 0;
+
     &:nth-of-type(2) {
       padding-top: 0;
     }
   }
 
   span {
-    flex: 1 0 100%;
+    display: block;
     font-size: 20px;
     font-family: $display-font;
-
-    +min-screen($media-medium) {
-      padding-left: 25%;
-    }
 
     &:last-of-type {
       padding-top: 5px;
       text-align: left;
-      font-size: 18px;
+      font-size: 16px;
       color: $secondary;
     }
-  }
-
-  +min-screen($media-medium) {
-    flex: 1 0 50%;
   }
 }

@@ -1,17 +1,16 @@
 import React from 'react';
-import { galleryArr } from '../Services/Data';
+import { GALLERY_IMAGES } from '../Services/Data';
 
-export default class Header extends React.Component {
-  
+export default class ImageGallery extends React.Component {
+
   renderImages() {
-    const newArr = galleryArr();
-    let galleryDomArr = [];
+    let images = [];
 
-    for (let i = 0; i <= newArr.length; i++) {  
-      let item = newArr[i];
+    for (let i = 0; i <= GALLERY_IMAGES.length; i++) {
+      let item = GALLERY_IMAGES[i];
 
-      if(item) {
-        galleryDomArr.push (
+      if (item) {
+        images.push(
           <div key={`gallery-image${i}`} className='img-wrapper'>
             <img className='img' src={item.image} alt={item.alt} />
           </div>
@@ -19,14 +18,14 @@ export default class Header extends React.Component {
       }
     }
 
-    return galleryDomArr;
+    return images;
   }
 
   render() {
     return (
-        <div className='image-gallery'>
-          {this.renderImages()}
-        </div>
+      <div className='image-gallery'>
+        {this.renderImages()}
+      </div>
     );
   }
 }

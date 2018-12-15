@@ -1,5 +1,5 @@
 import React from 'react';
-import PageTemplate from './Containers/PageTemplate';
+import PageTemplate from './Pages/PageTemplate';
 import './App.styl';
 
 export default class App extends React.Component {

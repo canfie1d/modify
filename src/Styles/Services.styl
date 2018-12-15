@@ -1,26 +1,25 @@
 .products {
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  margin: 50px auto;
 
   .product__img-wrapper {
-    flex: 1 1 100%;
-    width: 100%;
-    margin-bottom: 40px;
-  
+    flex: 1 1 auto;
+
+    &:not(:last-of-type) {
+      margin-bottom: 100px;
+    }
+
     .products__img {
-      max-width: 300px;
-      // width: 100%;
+      max-width: 280px;
       height: auto;
-      padding: 10px;
       display: block;
       margin: auto;
     }
+
     +min-screen($media-medium) {
-      flex: 1 1 50%;
-      width: 50%;
+      max-width: 300px;
     }
   }
 }

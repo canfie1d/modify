@@ -8,6 +8,7 @@ body {
   min-height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 * {
@@ -28,8 +29,28 @@ body {
   width: 100%;
   max-width: 700px;
 
+  &.p--bold {
+    font-weight: 700;
+  }
+
   &.p--dark {
     color: $gray--900;
+  }
+
+  &.p--success {
+    color: $white;
+    font-weight: 700;
+    background: $status--success;
+    padding: 10px 20px;
+    border-radius: 28px;
+  }
+
+  &.p--error {
+    color: $white;
+    font-weight: 700;
+    background: $status--error;
+    padding: 10px 20px;
+    border-radius: 28px;
   }
 
   &.p--small {
@@ -40,13 +61,26 @@ body {
     text-align: left;
   }
 
+  &.p--center {
+    text-align: center;
+  }
+
   &.p--align-right {
     text-align: right;
   }
+
+}
+
+.m-b-50 {
+  margin-bottom: 50px;
 }
 
 .m-b-100 {
   margin-bottom: 100px;
+}
+
+.m-b-200 {
+  margin-bottom: 200px;
 }
 
 .indent {
@@ -62,9 +96,14 @@ a {
 
 }
 
-.sticky {
-  position: sticky;
-  top: 0;
+.a {
+  font-family: $display-font;
+  font-size: 20px;
+
+  &.a--center {
+    display: block;
+    text-align: center;
+  }
 }
 
 .visually-hidden {
@@ -72,6 +111,6 @@ a {
   height: 1px;
   width: 1px;
   overflow: hidden;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
+  margin-left: -1px;
 }

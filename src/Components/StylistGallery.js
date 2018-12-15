@@ -1,21 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getStylists } from '../Services/Data';
+import { getStylists } from '../Services/StylistData';
 
 export default class Header extends React.Component {
-  
+
   renderStylists() {
-    const stylistArr = getStylists();
-    let stylistDomArr = [];
+    const stylists = getStylists();
+    let stylistArr = [];
 
-    for (let i = 0; i <= stylistArr.length; i++) {  
-      let item = stylistArr[i];
+    for (let i = 0; i <= stylists.length; i++) {
+      let item = stylists[i];
 
-      if(item) {
-        stylistDomArr.push (
+      if (item) {
+        stylistArr.push(
           <div key={`item-${i}`} className='stylist-wrapper'>
             <Link key={`stylist${i}`} to={`/stylists/${item.name.toLowerCase()}`} className='stylist'>
-              <img className='stylist__img' src={item.image} alt={`portrait of ${item.name}`} />
+              <div className='stylist__img-wrapper'>
+                <img className='stylist__img' src={item.image} alt={`portrait of ${item.name}`} />
+              </div>
               <div className='stylist__info'>
                 <span className='stylist__info--name'>{item.name}</span>
                 <span className='stylist__info--position'>{item.position}</span>
@@ -26,14 +28,14 @@ export default class Header extends React.Component {
       }
     }
 
-    return stylistDomArr;
+    return stylistArr;
   }
 
   render() {
     return (
-        <div className='stylist-gallery'>
-          {this.renderStylists()}
-        </div>
+      <div className='stylist-gallery'>
+        {this.renderStylists()}
+      </div>
     );
   }
 }

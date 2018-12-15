@@ -1,16 +1,24 @@
 .button {
+  position: relative;
+  top: 0;
   display: inline-block;
   padding: 10px 20px;
-  font-size: 24px;
+  font-size: 20px;
   font-family: $body-font;
   box-shadow: none;
   border: 1px solid $black;
   background: $white;
-  color: $gray--900;
   border-radius: 25px;
   color: $gray--900;
   text-decoration: none;
   user-select: none;
+  transition: top 200ms ease,
+              box-shadow 200ms ease;
+
+  &:hover {
+    box-shadow: 1px 1px 2px 0 rgba(0,0,0,.15);
+    top: -2px;
+  }
 
   &:focus {
     outline: none;
@@ -19,6 +27,7 @@
 
   &.button--alt {
     background: $primary;
+    font-weight: 700;
     color: $white;
     border: 1px solid transparent;
 

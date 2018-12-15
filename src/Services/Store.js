@@ -10,6 +10,6 @@ if (process.env.NODE_ENV !== 'production') {
   middleware = [...middleware, logger];
 }
 
-export default function() {
+export default function () {
   return createStore(reducers, applyMiddleware(...middleware));
 }

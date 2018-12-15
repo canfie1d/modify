@@ -3,45 +3,66 @@ backend:
   repo: canfie1d/modify
   branch: prod
 
-publish_mode: editorial_workflow
-media_folder: "Assets/Images/Uploads"
+media_folder: "public/assets/images/uploads" # Media files will be stored here
+public_folder: "static/media/images" # The src attribute for uploaded media
 
-collections: 
-  - name: "home" 
-    label: "Home"
-    folder: "Home/"
-    slug: "{{name}}"
-    create: false
-    fields:
-        - {label: "Intro Paragraph 1", name: "intro1", widget: "string" }
-        - {label: "Intro Paragraph 2", name: "intro2", widget: "string"}
-        - {label: "Image 1", name: "image1", widget: "image"}
-        - {label: "Image 2", name: "image2", widget: "image"}
-        - {label: "Image 3", name: "image3", widget: "image"}
-        - {label: "Image 4", name: "image4", widget: "image"}
-        - {label: "Image 5", name: "image5", widget: "image"}
-        - {label: "Image 6", name: "image6", widget: "image"}
-        - {label: "Image 7", name: "image7", widget: "image"}
-        - {label: "Image 8", name: "image8", widget: "image"}
-        - {label: "Image 9", name: "image9", widget: "image"}
-        - {label: "Image 10", name: "image10", widget: "image"}
-        - {label: "Image 11", name: "image11", widget: "image"}
-        - {label: "Image 12", name: "image12", widget: "image"}
+collections: # A list of collections the CMS should be able to edit
+  - name: "home-content"
+    label: "Home Content"
+    files:
+      - file: "src/Content/home-content.json"
+        label: "Intro Paragraphs"
+        name: "introParagraphs"
+        fields:
+          [{label: Paragraph, name: paragraph1, widget: string}, {label: Paragraph, name: paragraph2, widget: string}]
+  # - name: "home-content" # Used in routes, ie.: /admin/collections/:slug/edit
+  #   label: "Home Content" # Used in the UI, ie.: "New Post"
+  #   folder: "src/Content/Home" # The path to the folder where the documents are stored
+  #   format: json
+  #   create: false # Allow users to create new documents in this collection
+  #   fields: # The fields for each document, usually in front matter
+  #     - {label: "Intro Paragraph", name: "title", widget: "string" }
+  #     - {label: "Intro Paragraph 2", name: "body", widget: "string" }
 
-  - name: "stylists" 
-    label: "Stylists"
-    folder: "Services/"
-    slug: "{{name}}"
-    create: true
-    fields:
-        - {label: "Name", name: "name", widget: "string" }
-        - {label: "Position", name: "position", widget: "string"}
-        - {label: "Image", name: "image", widget: "image"}
-        - {label: "Bio", name: "bio", widget: "string"}
-        - {label: "Bio Continued", name: "bio2", widget: "string"}
-        - {label: "Contact", name: "contact", widget: "string" }
-        - {label: "Website", name: "website", widget: "string" }
-        - {label: "Phone Number", name: "phone", widget: "string" }
-        - {label: "Email", name: "email", widget: "string"}
-        - {label: "Instagram Name", name: "instagram", widget: "string" }
+  # - name: "home-images"
+  #   label: "Home Images"
+  #   folder: "src/Content/Home"
+  #   format: json
+  #   create: true
+  #   fields:
+  #     - {label: "Image", name: "title", widget: "image" }
+  #     - {label: "Image Description", name: "alt", widget: "string" }
 
+
+  # - name: "stylists"
+  #   label: "Stylists"
+  #   folder: "src/Content/Stylists"
+  #   format: json
+  #   create: true
+  #   fields:
+  #       - label: "Stylist"
+  #         name: "title"
+  #         widget: "object"
+  #         fields:
+  #           - {label: "Name", name: "title", widget: "string" }
+  #           - {label: "Position", name: "position", widget: "string"}
+  #           - {label: "Image", name: "image", widget: "image"}
+  #           - {label: "Bio", name: "bio", widget: "string"}
+  #           - {label: "Bio Continued", name: "bio2", widget: "string"}
+  #           - {label: "Contact", name: "contact", widget: "string" }
+  #           - {label: "Website", name: "website", widget: "string", required: false }
+  #           - {label: "Phone Number", name: "phone", widget: "string", required: false }
+  #           - {label: "Email", name: "email", widget: "string", required: false}
+
+  # - name: "services"
+  #   label: "Services"
+  #   folder: "src/Content/Services"
+  #   format: json
+  #   create: true
+  #   fields:
+  #     - label: "Service"
+  #       name: "title"
+  #       widget: "object"
+  #       fields:
+  #         - {label: "Service Name", name: "title", widget: "string" }
+  #         - {label: "Service Cost", name: "serviceCost", widget: "string"}
