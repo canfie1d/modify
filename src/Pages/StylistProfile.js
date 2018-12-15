@@ -96,7 +96,7 @@ export default class StylistProfile extends React.Component {
     let stylist = getStylists(this.props.match.params.name);
     // TODO Make this string gender based
     const instagramText = stylist.instagram ?
-      <p className='p p--dark'>Check out her instagram profile at <a href={`https://instagram.com/{stylist.instagram}`}>{stylist.instagram}</a>.</p> :
+      <p className='p p--dark'>Check out her instagram profile at <a href={`https://instagram.com/${stylist.instagram}`}>{stylist.instagram}</a>.</p> :
       null;
 
     return (
