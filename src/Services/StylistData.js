@@ -368,7 +368,7 @@ export function getStylists(stylist) {
       ],
       website: "http://vagaro.com/schona",
       phone: "206-371-8683",
-      instagram: 'schonachristine_hairandmakeup'
+      instagram: 'Schonachristie_Hairandmakeup'
     }
   ];
 
