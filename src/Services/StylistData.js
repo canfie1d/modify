@@ -360,7 +360,7 @@ export function getStylists(stylist) {
       phone: "206-235-8304"
     },
     {
-      image: 'https://s3.amazonaws.com/modifyhair-images/stylists/avatar.jpg',
+      image: 'https://s3.amazonaws.com/modifyhair-images/stylists/schona.jpg',
       name: 'Schona',
       position: 'Stylist',
       bio: [
