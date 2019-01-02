@@ -185,7 +185,7 @@ export function getStylists(stylist) {
         "I started my career 6 years ago at Mood Swings Salon, a popular Aveda salon in Tempe, Arizona. While there, I had the opportunity to refine my craft and learn new techniques from a number of successful stylists.",
         "My specialties are precision cuts, balayage, and blondes! I provide a customized look for each of my guests based on personal style, hair type and lifestyle. I look forward to making you look and feel your absolute best!"
       ],
-      website: "http://dustywynn.com"
+      website: "https://www.styleseat.com/m/v/dustywynn"
     },
     {
       image: 'https://s3.amazonaws.com/modifyhair-images/stylists/robin.jpg',
